@@ -1,1 +1,8 @@
-@import "nullstyle";
+@import "_nullstyle";
+@import "_fonts";
+
+$maxWidth: 1440px;
+$maxWidthContainer: 1180px;
+$md1: $maxWidthContainer + 12;
+$md2: 479.98px;
+
