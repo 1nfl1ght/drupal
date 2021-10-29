@@ -1,7 +1,12 @@
 @import "_nullstyle";
 @import "_fonts";
 
-$containerWidth: 1180px;
+$containerWidth: 1180;
 
 $fontMont: "Montserrat";
 $fontUbuntu: "Ubuntu";
+
+._container {
+    width: $containerWidth + px;
+    margin: 0 auto;
+}

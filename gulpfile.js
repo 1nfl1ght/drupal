@@ -37,10 +37,9 @@ let {src, dest}= require('gulp'),
     clean_css = require("gulp-clean-css"),
     rename = require("gulp-rename"),
     uglify = require("gulp-uglify-es").default,
-    imagemin = require("gulp-imagemin"),
-    webp = require("gulp-webp");
+    imagemin = require("gulp-imagemin");
 
-function browserSync(params) {
+function browserSync() {
     browsersync.init({
         server:{
             baseDir: "./" + project_folder + "/"
@@ -100,9 +99,6 @@ function js() {
 
 function images() {
     return src(path.src.img)
-        .pipe(webp({
-            quality: 70
-        }))
         .pipe(dest(path.build.img))
         .pipe(src(path.src.img))
         .pipe(imagemin({
@@ -115,14 +111,14 @@ function images() {
         .pipe(browsersync.stream())
 }
 
-function watchFiles(params) {
+function watchFiles() {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.css], css);
     gulp.watch([path.watch.js], js);
     gulp.watch([path.watch.img], images);
 }
 
-function clean(params) {
+function clean() {
     return del(path.clean);
 }
 
