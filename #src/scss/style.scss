@@ -1,5 +1,6 @@
 @import "_nullstyle";
 @import "_fonts";
+@import "_icons";
 
 $containerWidth: 1180;
 
@@ -9,4 +10,12 @@ $fontUbuntu: "Ubuntu";
 ._container {
     width: $containerWidth + px;
     margin: 0 auto;
+}
+
+.header {
+    &__menu {
+        height: 88px;
+        background-color: green;
+    }
+    height: 650px;
 }
