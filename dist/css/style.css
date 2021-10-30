@@ -102,25 +102,29 @@ h6 {
 }
 
 .header {
-  background-color: rgba(0, 0, 0, 0.6);
   height: 650px;
   overflow: hidden;
 }
 
 .header__menu {
-  z-index: 2;
+  z-index: 3;
   height: 88px;
   position: relative;
 }
 
-.video {
+.header__pandaimg {
+  z-index: 2;
+  position: absolute;
+}
+
+.header__video {
   -webkit-filter: brightness(40%);
           filter: brightness(40%);
   position: relative;
   z-index: 1;
 }
 
-.video__media {
+.header__video .video__media {
   width: 100%;
   height: auto;
   position: absolute;
