@@ -7,7 +7,7 @@
     </div>
     <div class="header__menu _container">
         <div class="menu__logo">
-            @@include('htmlSvg/_drupalsvg.html')
+            <a href="#">@@include('htmlSvg/_drupalsvg.html')</a>
         </div>
         <div class="menu__body">
             <ul class="menu__list">
@@ -17,6 +17,23 @@
                 <li><a href="" class="menu__link">ОТЗЫВЫ</a></li>
                 <li><a href="" class="menu__link">КОНТАКТЫ</a></li>
             </ul>
+        </div>
+        <di class="menu__phone-number">
+            <div class="number__elem" style="margin-right: 40px;">
+                8 800 222-26-73
+            </div>
+            <!-- <div class="number__elem" style="margin-right: 14px;">
+                RU
+            </div> -->
+            <div class="number__elem">
+                <form>
+                    <select class="select" name="select-language"> <!--Supplement an id here instead of using 'name'-->
+                        <option value="RU"  selected>RU</option>
+                        <option value="EN">EN</option>
+                    </select>
+                </form>
+                <!-- @@include('htmlSvg/_arrow-lang.html') -->
+            </div>
         </div>
     </div>
 </header>

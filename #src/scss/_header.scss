@@ -1,0 +1,114 @@
+@import "_fonts";
+
+$fontMont: "Montserrat";
+$fontUbuntu: "Ubuntu";
+
+.header {
+    height: 650px;
+    overflow: hidden;
+    &__menu {
+        display: flex;
+        z-index: 3;
+        height: 88px;
+        position: relative;
+        align-items: center;
+    }
+    &__pandaimg {
+        filter: brightness(80%);
+        z-index: 2;
+        position: absolute;
+    }
+}
+
+.header__video {
+    filter: brightness(40%);
+    position: relative;
+    z-index: 1;
+    .video__media{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.menu {
+
+    &__logo {
+        margin-right: 60px;
+    }
+
+    &__body {
+        
+    }
+
+    &__list {
+        display: flex;
+        li {
+            margin-right: 32px;
+        }
+
+        a {
+            position: relative;
+        }
+
+        a::after {
+            position: absolute;
+            display: block;
+            content: "";
+            bottom: -8px;
+            height: 3px;
+            width: 0%;
+            background-color: #F14D34;
+            transition: width .4s;
+        }
+        a:hover::after {
+            width: 100%;
+        }
+    }
+    &__link {
+        font-family: $fontUbuntu;
+        font-size: 12px;
+        font-weight: 500;
+        color: white;
+    }
+    &__phone-number {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        color: white;
+        font-family: $fontMont;
+        font-weight: 500;
+        font-size: 18px;
+        span {
+            margin-right: 38px;
+        }
+    }
+}
+
+.number {
+    &__elem {
+        display: flex;
+        align-items: center;
+        .select {
+            color: white;
+            font-family: $fontMont;
+            font-weight: 700;
+            font-size: 14px;
+            width: 46px;
+            height: 20px;
+            appearance: none;
+            background: url("../img/svg/arrow-lang.svg") 96% / 22% no-repeat;
+            option {
+                color: black;
+                font-family: $fontMont;
+                border-radius: 10px;
+            }
+        }
+        .select:hover {
+            cursor: pointer;
+        }
+    }
+    
+}
