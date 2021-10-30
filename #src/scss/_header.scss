@@ -112,3 +112,67 @@ $fontUbuntu: "Ubuntu";
     }
     
 }
+
+.header {
+    &__content {
+        color: white;
+        position: relative;
+        z-index: 3;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        height: 562px;
+        
+    }
+}
+.content {
+
+    &__info {
+        width: 506px;
+        height: 306px;
+        min-height: 100px;
+        display: flex;
+        flex-direction: column;
+        h1 {
+            font-family: $fontMont;
+            font-weight: 700;
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+        p {
+            font-family: $fontMont;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+
+    &__achievements {
+    }
+}
+.info {
+    &__tariffs {
+        margin-top: 55px;
+        cursor: pointer;
+        width: 220px;
+        height: 60px;
+        border: 2px solid #F14D34;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .4s;
+        a {
+            color: white;
+            font-family: $fontMont;
+            font-weight: 500;
+            font-size: 12px;
+        }
+    }
+    &__tariffs:hover {
+        background-color: #F14D34;
+        a {
+            color: black;
+        }
+    }
+}
