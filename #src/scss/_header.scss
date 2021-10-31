@@ -151,15 +151,20 @@ $mainColor: #F14D34;
     &__achievements {
         display: flex;
         flex-wrap: wrap;
-        align-items: flex-end;
         .achievements__elem{
             position: relative;
+            height: 92px;
             width: 135px;
             margin: 60px 40px 50px 0px;
+            padding-top: 21px;
             span{
                 font-family: $fontMont;
                 font-size: 24px;
                 font-weight: 700;
+                img {
+                    width: 59px;
+                    height: 58px;
+                }
             }
             p {
                 font-family: $fontMont;
@@ -168,15 +173,26 @@ $mainColor: #F14D34;
                 line-height: 15px;
             }
         }
-        // .achievements__elem::before {
-        //     content: "";
-        //     display: block;
-        //     position: absolute;
-        //     left: -11px;
-        //     width: 3px;
-        //     background-color: $mainColor;
-        //     height: 80px;
-        // }
+        .achievements__elem::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: -11px;
+            width: 3px;
+            background-color: $mainColor;
+            height: 80px;
+        }
+
+        .achievements__elem :first-child:before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: -11px;
+            top: 5px;
+            width: 3px;
+            background-color: $mainColor;
+            height: 100px;
+        }
     }
 }
 .info {
