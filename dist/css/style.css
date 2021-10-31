@@ -14,6 +14,7 @@
   padding: 0;
   margin: 0;
   border: 0;
+  font-family: sans-serif;
 }
 
 *,
@@ -246,9 +247,7 @@ h6 {
 }
 
 .content__info {
-  width: 506px;
-  height: 306px;
-  min-height: 100px;
+  width: 750px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -256,9 +255,11 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-right: 100px;
 }
 
 .content__info h1 {
+  width: 475px;
   font-family: "Montserrat";
   font-weight: 700;
   font-size: 52px;
@@ -270,6 +271,36 @@ h6 {
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
+}
+
+.content__achievements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.content__achievements .achievements__elem {
+  position: relative;
+  width: 135px;
+  margin: 60px 40px 50px 0px;
+}
+
+.content__achievements .achievements__elem span {
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.content__achievements .achievements__elem p {
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
 }
 
 .info__tariffs {
@@ -302,10 +333,6 @@ h6 {
 
 .info__tariffs:hover {
   background-color: #F14D34;
-}
-
-.info__tariffs:hover a {
-  color: black;
 }
 
 ._container {
