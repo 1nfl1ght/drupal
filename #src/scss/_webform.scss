@@ -1,7 +1,186 @@
 @import "_fonts";
 
+$fontMont: "Montserrat";
+
 .webform {
+    background: linear-gradient(261.2deg, rgba(255, 255, 255, 0.276) -114.85%, rgba(255, 255, 255, 0) 69.04%), #040613;
+    height: 816px;
+    position: relative;
+    color: white;
     &__body {
-        
+        display: flex;
+        justify-content: space-between;
+        z-index: 2;
+        position: relative;
+        .body {
+            &__info {
+                margin-top: 117px;
+                width: 480px;
+                .info__text {
+                    h2 {
+                        font-family: $fontMont;
+                        font-size: 42px;
+                        font-weight: 700;
+                        line-height: 51px;
+                        margin-bottom: 19px;
+                    }
+                    p {
+                        opacity: 0.7;
+                        font-family: $fontMont;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 22px;
+                        margin-bottom: 142px;
+                    }
+                }
+                .info__number {
+                    font-family: $fontMont;
+                    font-weight: 700;
+                    font-size: 32px;
+                    margin-bottom: 30px;
+                }
+                .info__mail {
+                    font-family: $fontMont;
+                    font-weight: 700;
+                    font-size: 18px;
+                    text-decoration: underline;
+                }
+            }
+            &__form {
+                margin-top: 117px;
+                width: 480px;
+
+                .form__checkbox {
+                    margin-bottom: 12px;
+                    position: relative;
+                    .checkbox__input {
+                        appearance: none;
+                        position: absolute;
+                    }
+                    .checkbox__label {
+                        display: inline-block;
+                        font-family: $fontMont;
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 14px;
+                        padding-left: 35px;
+                        
+                    }
+                    .checkbox__label::before {
+                        content: "";
+                        display: block;
+                        height: 25px;
+                        width: 25px;
+                        opacity: 0.5;
+                        border: 2px solid #FFFFFF;
+                        box-sizing: border-box;
+                        border-radius: 5px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 1;
+                    }
+                    .checkbox__label::after {
+                        content: "";
+                        display: block;
+                        width: 25px;
+                        height: 25px;
+                        background: url("../img/svg/Group2.svg") no-repeat center;
+                        background-size: 15px 15px;
+                        opacity: 0;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 2;
+                    }
+                    .checkbox__input:checked + .checkbox__label::after{
+                        opacity: 1;
+                    }
+                }
+        }
+    }
+    
+    }
+    .ds {
+		&__1 {
+            z-index: 1;
+            position: absolute;
+            left: 40%;
+		}
+
+		&__2 {
+            z-index: 1;
+            position: absolute;
+            top: auto;
+            right: 0;
+            bottom: 0;
+		}
+    }
+
+    .form {
+
+		&__elem {
+            font-family: $fontMont;
+            color: white;
+            font-weight: 500;
+            font-size: 14px;
+            width: 480px;
+            height: 68px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            padding-left: 24px;
+            border: 1px solid rgba(255, 255, 255, .3);
+            background: none;
+            margin-bottom: 8px;
+		}
+        &__elem::placeholder { 
+            color: rgba(255, 255, 255, 1);
+        }
+    }
+
+    #comment {
+        height: 128px;
+        position: relative;
+        margin-bottom: 12px;
+        padding-bottom: 65px;
+    }
+    // #comment::placeholder { 
+    //     position: absolute;
+    //     top: 23px;
+    // }
+
+    #form__button {
+        color: white;
+        width: 480px;
+        height: 60px;
+        border: 2px solid #f14d34;
+        border-radius: 5px;
+        background: none;
+        transition: .4s;
+        font-family: $fontMont;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    #form__button:hover {
+        background-color: #f14d34;
+    }
+
+    footer {
+        border-top: 1px solid rgba(255, 255, 255, .3);
+        height: 150px;
+        font-family: $fontMont;
+        font-weight: regular;
+        bottom: 0;
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        .footer__text {
+            opacity: 0.5;
+            font-family: $fontMont;
+            font-weight: regular;
+        }
     }
 }

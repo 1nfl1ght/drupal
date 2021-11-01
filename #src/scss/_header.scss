@@ -49,6 +49,7 @@ $mainColor: #F14D34;
 
         a {
             position: relative;
+            opacity: 0.8;
         }
 
         a::after {
@@ -63,6 +64,9 @@ $mainColor: #F14D34;
         }
         a:hover::after {
             width: 100%;
+        }
+        a:hover {
+            opacity: 1;
         }
     }
     &__link {
@@ -138,6 +142,7 @@ $mainColor: #F14D34;
             margin-bottom: 15px;
         }
         p {
+            opacity: 0.8;
             font-family: $fontMont;
             font-weight: 500;
             font-size: 18px;
@@ -160,6 +165,7 @@ $mainColor: #F14D34;
                 font-weight: 700;
             }
             p {
+                opacity: 0.7;
                 font-family: $fontMont;
                 font-size: 12px;
                 font-weight: 500;

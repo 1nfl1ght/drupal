@@ -10,6 +10,10 @@
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700&display=swap&subset=cyrillic-ext);
 
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:500&display=swap&subset=cyrillic-ext);
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700&display=swap&subset=cyrillic-ext);
+
 * {
   padding: 0;
   margin: 0;
@@ -156,6 +160,7 @@ h6 {
 
 .menu__list a {
   position: relative;
+  opacity: 0.8;
 }
 
 .menu__list a::after {
@@ -173,6 +178,10 @@ h6 {
 
 .menu__list a:hover::after {
   width: 100%;
+}
+
+.menu__list a:hover {
+  opacity: 1;
 }
 
 .menu__link {
@@ -267,6 +276,7 @@ h6 {
 }
 
 .content__info p {
+  opacity: 0.8;
   font-family: "Montserrat";
   font-weight: 500;
   font-size: 18px;
@@ -296,6 +306,7 @@ h6 {
 }
 
 .content__achievements .achievements__elem p {
+  opacity: 0.7;
   font-family: "Montserrat";
   font-size: 12px;
   font-weight: 500;
@@ -359,6 +370,220 @@ h6 {
 
 .info__tariffs:hover {
   background-color: #F14D34;
+}
+
+.webform {
+  background: -o-linear-gradient(188.8deg, rgba(255, 255, 255, 0.276) -114.85%, rgba(255, 255, 255, 0) 69.04%), #040613;
+  background: linear-gradient(261.2deg, rgba(255, 255, 255, 0.276) -114.85%, rgba(255, 255, 255, 0) 69.04%), #040613;
+  height: 816px;
+  position: relative;
+  color: white;
+}
+
+.webform__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 2;
+  position: relative;
+}
+
+.webform__body .body__info {
+  margin-top: 117px;
+  width: 480px;
+}
+
+.webform__body .body__info .info__text h2 {
+  font-family: "Montserrat";
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 51px;
+  margin-bottom: 19px;
+}
+
+.webform__body .body__info .info__text p {
+  opacity: 0.7;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 142px;
+}
+
+.webform__body .body__info .info__number {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.webform__body .body__info .info__mail {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+.webform__body .body__form {
+  margin-top: 117px;
+  width: 480px;
+}
+
+.webform__body .body__form .form__checkbox {
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.webform__body .body__form .form__checkbox .checkbox__input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: absolute;
+}
+
+.webform__body .body__form .form__checkbox .checkbox__label {
+  display: inline-block;
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  padding-left: 35px;
+}
+
+.webform__body .body__form .form__checkbox .checkbox__label::before {
+  content: "";
+  display: block;
+  height: 25px;
+  width: 25px;
+  opacity: 0.5;
+  border: 2px solid #FFFFFF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.webform__body .body__form .form__checkbox .checkbox__label::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: url("../img/svg/Group2.svg") no-repeat center;
+  background-size: 15px 15px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.webform__body .body__form .form__checkbox .checkbox__input:checked + .checkbox__label::after {
+  opacity: 1;
+}
+
+.webform .ds__1 {
+  z-index: 1;
+  position: absolute;
+  left: 40%;
+}
+
+.webform .ds__2 {
+  z-index: 1;
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 0;
+}
+
+.webform .form__elem {
+  font-family: "Montserrat";
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  width: 480px;
+  height: 68px;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: none;
+  margin-bottom: 8px;
+}
+
+.webform .form__elem::-webkit-input-placeholder {
+  color: white;
+}
+
+.webform .form__elem::-moz-placeholder {
+  color: white;
+}
+
+.webform .form__elem:-ms-input-placeholder {
+  color: white;
+}
+
+.webform .form__elem::-ms-input-placeholder {
+  color: white;
+}
+
+.webform .form__elem::placeholder {
+  color: white;
+}
+
+.webform #comment {
+  height: 128px;
+  position: relative;
+  margin-bottom: 12px;
+  padding-bottom: 65px;
+}
+
+.webform #form__button {
+  color: white;
+  width: 480px;
+  height: 60px;
+  border: 2px solid #f14d34;
+  border-radius: 5px;
+  background: none;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.webform #form__button:hover {
+  background-color: #f14d34;
+}
+
+.webform footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  height: 150px;
+  font-family: "Montserrat";
+  font-weight: regular;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.webform footer .footer__text {
+  opacity: 0.5;
+  font-family: "Montserrat";
+  font-weight: regular;
 }
 
 ._container {
