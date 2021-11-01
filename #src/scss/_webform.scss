@@ -40,6 +40,8 @@ $fontMont: "Montserrat";
                     margin-bottom: 30px;
                 }
                 .info__mail {
+                    display: flex;
+                    align-items: center;
                     font-family: $fontMont;
                     font-weight: 700;
                     font-size: 18px;
@@ -181,6 +183,9 @@ $fontMont: "Montserrat";
             opacity: 0.5;
             font-family: $fontMont;
             font-weight: regular;
+            p {
+                margin-bottom: 6px;
+            }
         }
     }
 }
