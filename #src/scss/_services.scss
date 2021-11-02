@@ -1,0 +1,51 @@
+@import "_fonts";
+
+$fontMont: "Montserrat";
+
+.services {
+    padding: 100px 0px;
+    h2 {
+        font-family: $fontMont;
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 51px;
+        width: 580px;
+        margin-bottom: 18px;
+    }
+
+    p {
+        opacity: .7;
+        font-family: $fontMont;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        width: 580px;
+        margin-bottom: 60px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        position: relative;
+        width: 182px;
+        p {
+            width: 182px;
+        }
+        margin-right: 110px;
+        margin-bottom: 50px;
+    }
+    &__item::before {
+        left: -30.22%;
+        right: 67.58%;
+        top: 8.76%;
+        bottom: 54.64%;
+        content: "";
+        height: 71px;
+        width: 114px;
+        background: url(../img/svg/icon-bg.svg) no-repeat;
+        position: absolute;
+    }
+}

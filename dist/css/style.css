@@ -14,6 +14,10 @@
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700&display=swap&subset=cyrillic-ext);
 
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:500&display=swap&subset=cyrillic-ext);
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700&display=swap&subset=cyrillic-ext);
+
 * {
   padding: 0;
   margin: 0;
@@ -594,6 +598,60 @@ h6 {
 
 .webform footer .footer__text p {
   margin-bottom: 6px;
+}
+
+.services {
+  padding: 100px 0px;
+}
+
+.services h2 {
+  font-family: "Montserrat";
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 51px;
+  width: 580px;
+  margin-bottom: 18px;
+}
+
+.services p {
+  opacity: 0.7;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  width: 580px;
+  margin-bottom: 60px;
+}
+
+.services__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.services__item {
+  position: relative;
+  width: 182px;
+  margin-right: 110px;
+  margin-bottom: 50px;
+}
+
+.services__item p {
+  width: 182px;
+}
+
+.services__item::before {
+  left: -30.22%;
+  right: 67.58%;
+  top: 8.76%;
+  bottom: 54.64%;
+  content: "";
+  height: 71px;
+  width: 114px;
+  background: url(../img/svg/icon-bg.svg) no-repeat;
+  position: absolute;
 }
 
 ._container {
