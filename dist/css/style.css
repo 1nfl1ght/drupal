@@ -18,6 +18,10 @@
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700&display=swap&subset=cyrillic-ext);
 
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:500&display=swap&subset=cyrillic-ext);
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700&display=swap&subset=cyrillic-ext);
+
 * {
   padding: 0;
   margin: 0;
@@ -611,6 +615,7 @@ h6 {
   line-height: 51px;
   width: 580px;
   margin-bottom: 18px;
+  color: #050C33;
 }
 
 .services p {
@@ -621,6 +626,7 @@ h6 {
   line-height: 22px;
   width: 580px;
   margin-bottom: 60px;
+  color: #050C33;
 }
 
 .services__list {
@@ -655,7 +661,83 @@ h6 {
   position: absolute;
 }
 
+.support {
+  padding-top: 40px;
+}
+
+.support__body {
+  color: #050C33;
+  margin-left: -26px;
+  margin-bottom: -208px;
+}
+
+.support__body h2 {
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 51px;
+  width: 400px;
+  margin: 0px auto 55px auto;
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.support__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.support__elem {
+  overflow: hidden;
+  width: 292px;
+  height: 292px;
+  padding: 30px 20px 0px 28px;
+  margin: 0px 5px 5px 0px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+
+.support__elem .elem__number {
+  font-family: "Montserrat";
+  font-size: 12px;
+  opacity: 0.5;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.support__elem .elem__name {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 12px;
+}
+
+.support__elem .elem__description {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  opacity: 0.7;
+}
+
+.scnd-block {
+  height: 839px;
+  background: -o-linear-gradient(188.8deg, rgba(255, 255, 255, 0.548) -114.85%, rgba(255, 255, 255, 0) 69.04%), #394047;
+  background: linear-gradient(261.2deg, rgba(255, 255, 255, 0.548) -114.85%, rgba(255, 255, 255, 0) 69.04%), #394047;
+}
+
 ._container {
   width: 1180px;
+  margin: 0 auto;
+}
+
+._min-container {
+  width: 1080px;
   margin: 0 auto;
 }

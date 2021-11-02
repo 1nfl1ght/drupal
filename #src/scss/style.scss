@@ -4,13 +4,20 @@
 @import "_header";
 @import "_webform";
 @import "_services";
+@import "_support";
 
 $containerWidth: 1180;
+$minContainer: 1080;
 
 $fontMont: "Montserrat";
 $fontUbuntu: "Ubuntu";
 
 ._container {
     width: $containerWidth + px;
+    margin: 0 auto;
+}
+
+._min-container {
+    width: $minContainer + px;
     margin: 0 auto;
 }
