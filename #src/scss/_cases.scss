@@ -1,0 +1,104 @@
+@import "_fonts";
+
+$fontMont: "Montserrat";
+
+.cases {
+    padding-top: 70px;
+    &__body {
+        h2 {
+            font-family: $fontMont;
+            font-size: 42px;
+            font-weight: 700;
+            color: #050C33;
+            text-align: center;
+        }
+        .cases {
+            &__items {
+                margin-top: 60px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                img {
+                    position: absolute;
+                    border-radius: 5px;
+                    position: absolute;
+                    z-index: 1;
+                }
+                h3 {
+                    color: white;
+                    font-family: $fontMont;
+                    font-size: 18px;
+                    line-height: 22px;
+                    font-weight: 700;
+                    width: 320px;
+                }
+            }
+
+            &__text {
+                width: 320px;
+                position: relative;
+                z-index: 4;
+                .date {
+                    font-family: $fontMont;
+                    font-size: 12px;
+                    color: white;
+                    font-size: 12px;
+                    font-weight: 700;
+                }
+                p {
+                    font-family: $fontMont;
+                    font-size: 14px;
+                    line-height: 22px;
+                    color: #050C33;
+                    font-weight: 500;
+                }
+            }
+    
+            &__item1 {
+                h3 {
+                    color: #050C33;
+                }
+                .date {
+                    color: #050C33;
+                }
+            }
+    
+            &__item2 {
+            }
+    
+            &__item3 {
+            }
+    
+            &__item4 {
+            }
+    
+            &__item5 {
+                h3 {
+                    color: #050C33;
+                }
+                .date {
+                    color: #050C33;
+                }
+            }
+    
+            &__item6 {
+            }
+    
+            &__item7 {
+            }
+    }
+    .w380 {
+        width: 380px;
+        height: 475px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    .w780 {
+        position: relative;
+        width: 780px;
+        height: 475px;
+        margin-bottom: 20px;
+    }
+    
+    }
+}

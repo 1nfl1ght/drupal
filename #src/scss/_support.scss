@@ -92,7 +92,9 @@ $bgSvgs: ( "item1" : url("../img/svg/support1.svg") no-repeat, "item2" : url("..
     position: relative;
     height: 839px;
     background: linear-gradient(261.2deg, rgba(255, 255, 255, 0.548) -114.85%, rgba(255, 255, 255, 0) 69.04%), #394047;
+    box-shadow: 0px 5px 5px rgba($color: #000000, $alpha: .3);
     .support__scnd {
+        padding-top: 205px;
         .explanations {
             margin-top: 192px;
             margin-left: auto;

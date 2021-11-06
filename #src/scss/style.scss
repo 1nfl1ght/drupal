@@ -5,6 +5,8 @@
 @import "_webform";
 @import "_services";
 @import "_support";
+@import "_plans";
+@import "_cases";
 
 $containerWidth: 1180;
 $minContainer: 1080;
@@ -20,5 +22,4 @@ $fontUbuntu: "Ubuntu";
 ._min-container {
     width: $minContainer + px;
     margin: 0 auto;
-    padding-top: 205px;
 }

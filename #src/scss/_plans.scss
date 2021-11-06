@@ -1,0 +1,161 @@
+@import "_fonts";
+
+$fontMont: "Montserrat";
+
+.plans {
+    position: relative;
+    .d-big-background {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .line {
+        width: 300px;
+        height: 1px;
+        opacity: .2;
+        margin-top: 20px;
+        margin-bottom: 48px;
+        background-color: black;
+    }
+
+    &__body {
+        padding-top: 150px;
+        h2 {
+            text-align: center;
+            font-family: $fontMont;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 60px;
+        }
+        >p {
+            text-align: center;
+            width: 468px;
+            font-family: $fontMont;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22px;
+            color: #050C33;
+            opacity: .5;
+            margin: 0px auto;
+        }
+        a {
+            display: block;
+            width: 260px;
+            color: #050C33;
+            font-family: $fontMont;
+            font-size: 12px;
+            font-weight: 500;
+            text-decoration: underline;
+            margin: 24px auto;
+        }
+    }
+
+    &__items {
+        display: flex;
+        position: relative;
+        align-items: center;
+        margin-bottom: 52px;
+        h3 {
+            color: #F14D34;
+            font-family: $fontMont;
+            font-size: 22px;
+            font-weight: 700;
+        }
+    }
+    &-item {
+        padding: 75px 60px 80px 60px;
+        span {
+            color: #050C33;
+            font-family: $fontMont;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            margin-left: 15px;
+            opacity: .7;
+        }
+    }
+    &__btn {
+        color: #F14D34;
+        font-family: $fontMont;
+        font-size: 12px;
+        font-weight: 500;
+        width: 270px;
+        height: 60px;
+        border: 1px solid #F14D34;
+        border-radius: 5px;
+        margin-top: 20px;
+        background-color: white;
+        transition: .4s;
+    }
+    &__btn:hover {
+        color: white;
+        background-color: #F14D34;
+    }
+}
+
+.item {
+    &__start {
+        z-index: 1;
+        width: 390px;
+        height: 619px;
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        margin-right: -8px;
+        background: white;
+        .line {
+            width: 270px;
+        }
+    }
+
+    &__business {
+        z-index: 2;
+        width: 420px;
+        height: 665px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        box-shadow: 0px 4px 60px rgba(162, 162, 162, 0.25);
+        background: white;
+        .plans__btn {
+            width: 300px;
+            margin-top: 50px;
+        }
+    }
+
+    &__vip {
+        z-index: 1;
+        width: 390px;
+        height: 619px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        margin-left: -10px;
+        background: white;
+        .line {
+            width: 270px;
+        }
+    }
+    &__price {
+        color: #050C33;
+        display: flex;
+        align-items: flex-start;
+        p {
+            font-family: $fontMont;
+            font-size: 72px;
+            font-weight: 700;
+        }
+        span {
+            font-family: $fontMont;
+            font-size: 28px;
+            font-weight: 500;
+            margin-top: 12px;
+            margin-left: 6px;
+        }
+        .time {
+            font-family: $fontMont;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+    &__option {
+        margin-bottom: 20px;
+    }
+}
