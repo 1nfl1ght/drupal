@@ -35,8 +35,11 @@ $fontMont: "Montserrat";
             }
 
             &__text {
-                width: 320px;
-                position: relative;
+                width: 380px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
                 z-index: 4;
                 .date {
                     font-family: $fontMont;
@@ -44,6 +47,8 @@ $fontMont: "Montserrat";
                     color: white;
                     font-size: 12px;
                     font-weight: 700;
+                    margin-top: 5px;
+                    opacity: 0.5;
                 }
                 p {
                     font-family: $fontMont;
@@ -51,54 +56,39 @@ $fontMont: "Montserrat";
                     line-height: 22px;
                     color: #050C33;
                     font-weight: 500;
+                    margin-top: 20px;
+                    opacity: 0.7;
                 }
-            }
-    
-            &__item1 {
-                h3 {
-                    color: #050C33;
-                }
-                .date {
-                    color: #050C33;
-                }
-            }
-    
-            &__item2 {
-            }
-    
-            &__item3 {
-            }
-    
-            &__item4 {
-            }
-    
-            &__item5 {
-                h3 {
-                    color: #050C33;
-                }
-                .date {
-                    color: #050C33;
-                }
-            }
-    
-            &__item6 {
-            }
-    
-            &__item7 {
             }
     }
     .w380 {
+        position: relative;
         width: 380px;
         height: 475px;
         margin-bottom: 20px;
-        position: relative;
+        .cases__text {
+            padding: 40px 50px;
+        }
     }
     .w780 {
         position: relative;
         width: 780px;
         height: 475px;
         margin-bottom: 20px;
+        .cases__text {
+            padding: 40px;
+        }
     }
-    
+    .spec__case {
+        .cases__text {
+            .date {
+                color: #050C33;
+            }
+            h3 {
+                color: #050C33;
+            }
+            padding: 70px 30px;
+        }
+    }
     }
 }
