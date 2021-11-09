@@ -568,8 +568,8 @@ h6 {
 }
 
 .webform .form__elem:focus {
-  -webkit-box-shadow: 0px 0px 6px #f14d34, 0px 0px 6px #f14d34;
-          box-shadow: 0px 0px 6px #f14d34, 0px 0px 6px #f14d34;
+  -webkit-box-shadow: 0px 0px 4px #f14d34, 0px 0px 4px #f14d34, 0px 0px 6px #f14d34;
+          box-shadow: 0px 0px 4px #f14d34, 0px 0px 4px #f14d34, 0px 0px 6px #f14d34;
 }
 
 .webform #comment {
@@ -700,7 +700,6 @@ h6 {
   line-height: 51px;
   width: 400px;
   margin: 0px auto 55px auto;
-  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .support__list {
@@ -720,8 +719,8 @@ h6 {
   padding: 30px 20px 0px 28px;
   margin: 0px 5px 5px 0px;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
   background-color: white;
 }
 
@@ -1185,6 +1184,28 @@ h6 {
 
 .cases__body .spec__case .cases__text h3 {
   color: #050C33;
+}
+
+.cases__more {
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 500;
+  color: #050C33;
+  border-radius: 5px;
+  background-color: white;
+  width: 260px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid rgba(5, 12, 51, 0.2);
+  margin: 20px auto;
 }
 
 ._container {

@@ -91,4 +91,19 @@ $fontMont: "Montserrat";
         }
     }
     }
+    &__more {
+        font-family: $fontMont;
+        font-size: 12px;
+        font-weight: 500;
+        color: #050C33;
+        border-radius: 5px;
+        background-color: white;
+        width: 260px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba($color: #050C33, $alpha: .2);
+        margin: 20px auto;
+    }
 }

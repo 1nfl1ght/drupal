@@ -141,7 +141,8 @@ $fontMont: "Montserrat";
             color: rgba(255, 255, 255, 1);
         }
         &__elem:focus {
-            box-shadow: 0px 0px 6px #f14d34,
+            box-shadow: 0px 0px 4px #f14d34,
+                        0px 0px 4px #f14d34,
                         0px 0px 6px #f14d34;
         }
     }
