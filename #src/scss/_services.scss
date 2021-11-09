@@ -3,7 +3,7 @@
 $fontMont: "Montserrat";
 
 .services {
-    padding: 100px 0px;
+    padding: 100px 0px 50px 0px;
     h2 {
         font-family: $fontMont;
         font-size: 42px;
@@ -31,6 +31,7 @@ $fontMont: "Montserrat";
     }
 
     &__item {
+        height: 200px;
         position: relative;
         width: 182px;
         p {
