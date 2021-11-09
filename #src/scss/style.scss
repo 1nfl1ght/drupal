@@ -8,6 +8,7 @@
 @import "_plans";
 @import "_cases";
 @import "_team";
+@import "_reviews";
 
 $containerWidth: 1180;
 $minContainer: 1080;
@@ -23,4 +24,16 @@ $fontUbuntu: "Ubuntu";
 ._min-container {
     width: $minContainer + px;
     margin: 0 auto;
+}
+
+.caption {
+    text-align: center;
+    h2 {
+        font-family: $fontMont;
+        font-size: 42px;
+        font-weight: 700;
+        color: #050C33;
+        margin-bottom: 20px;
+        line-height: 51px;
+    }
 }

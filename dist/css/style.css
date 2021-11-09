@@ -34,6 +34,10 @@
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700&display=swap&subset=cyrillic-ext);
 
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:500&display=swap&subset=cyrillic-ext);
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700&display=swap&subset=cyrillic-ext);
+
 * {
   padding: 0;
   margin: 0;
@@ -932,6 +936,8 @@ h6 {
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 60px;
+  position: relative;
+  z-index: 4;
 }
 
 .plans__body > p {
@@ -1319,19 +1325,6 @@ h6 {
   width: 280px;
 }
 
-.team-group .caption {
-  text-align: center;
-}
-
-.team-group .caption h2 {
-  font-family: "Montserrat";
-  font-size: 42px;
-  font-weight: 700;
-  color: #050C33;
-  margin-bottom: 20px;
-  line-height: 51px;
-}
-
 .team-group .entire__team {
   font-family: "Montserrat";
   font-size: 12px;
@@ -1354,6 +1347,10 @@ h6 {
   margin: 80px auto 0px auto;
 }
 
+.reviews-body {
+  padding-top: 150px;
+}
+
 ._container {
   width: 1180px;
   margin: 0 auto;
@@ -1362,4 +1359,17 @@ h6 {
 ._min-container {
   width: 1080px;
   margin: 0 auto;
+}
+
+.caption {
+  text-align: center;
+}
+
+.caption h2 {
+  font-family: "Montserrat";
+  font-size: 42px;
+  font-weight: 700;
+  color: #050C33;
+  margin-bottom: 20px;
+  line-height: 51px;
 }
