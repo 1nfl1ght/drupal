@@ -92,7 +92,7 @@ function js() {
         .pipe(uglify())
         .pipe(
             rename({
-                extname: ".min.css"
+                extname: ".min.js"
             })
         )
         .pipe(dest(path.build.js))

@@ -1347,8 +1347,117 @@ h6 {
   margin: 80px auto 0px auto;
 }
 
+.reviews {
+  background: url("../img/svg/right-quote-sign.svg") no-repeat left top;
+  background-size: 26%;
+}
+
 .reviews-body {
   padding-top: 150px;
+}
+
+.reviews-block {
+  width: 980px;
+  padding: 66px 0px 66px 66px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 4px 60px rgba(162, 162, 162, 0.25);
+          box-shadow: 0px 4px 60px rgba(162, 162, 162, 0.25);
+  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 0;
+  background-color: white;
+}
+
+.reviews-block .slider {
+  min-width: 0;
+  width: 64%;
+  padding: 14px 60px;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  overflow: hidden;
+}
+
+.reviews-block .slider__item .comment {
+  width: 462px;
+}
+
+.reviews-block .slider__item .comment p {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #050C33;
+  margin-top: 41px;
+  margin-bottom: 28px;
+}
+
+.reviews-block .slider__item .person {
+  width: 462px;
+}
+
+.reviews-block .slider__item .person span {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #050C33;
+  opacity: 0.5;
+}
+
+.reviews-block .slider__item .person a {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #050C33;
+}
+
+.reviews-block .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.reviews-block .slick__arrows {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.reviews-block .slick__arrows .slick-arrow {
+  width: 16px;
+  height: 32px;
+}
+
+.reviews-block .slick__arrows .slick-prev {
+  background: url("https://drupal-coder.ru/themes/bootstrap_dc/images/arrow-left.svg") no-repeat center;
+  background-size: contain;
+}
+
+.reviews-block .slick__arrows .slick-next {
+  background: url("https://drupal-coder.ru/themes/bootstrap_dc/images/arrow-right.svg") no-repeat center;
+  background-size: contain;
+}
+
+.reviews-block .slick__arrows .slick-slide-num {
+  margin: 0px 43px;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 28px;
+  color: #e0e0e0;
+}
+
+.reviews-block .slick__arrows .slick-slide-num-current {
+  color: #050c33;
 }
 
 ._container {

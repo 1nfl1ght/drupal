@@ -1,1 +1,1 @@
-@@include('alert.js')
+@@include('reviews_slider.js')
