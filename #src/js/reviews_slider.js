@@ -3,7 +3,7 @@ $(document).ready(function() {
         $('.slick-slide-num-current').text('0' + 1 + ' '); // ' / ' + '0' + slick.slideCount
     })
     $('.slider').on(`afterChange`, function(event, slick, currentSlide, nextSlide) {
-        $('.slick-slide-num-current').text('0' + (currentSlide + 1)) + ' '; // + ' / 0' + slick.slideCount
+        $('.slick-slide-num-current').text('0' + (currentSlide + 1) + ' '); // + ' / 0' + slick.slideCount
     })
     $('.slider').slick({
         dots: false,
