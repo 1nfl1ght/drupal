@@ -68,6 +68,10 @@ $fontMont: "Montserrat";
             margin-top: 55px;
             .photo {
                 margin-bottom: 30px;
+                img {
+                    width: 280px;
+                    height: 280px;
+                }
             }
             .description {
                 .name {
@@ -88,10 +92,10 @@ $fontMont: "Montserrat";
             }
 		}
     }
-    .group-list:after {
-        content: "";
-        width: 280px;
-    }
+    // .group-list:after {
+    //     content: "";
+    //     width: 280px;
+    // }
 
     .entire__team {
         font-family: $fontMont;

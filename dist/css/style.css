@@ -533,7 +533,7 @@ h6 {
 .webform .ds__1 {
   z-index: 1;
   position: absolute;
-  left: 40%;
+  left: 45%;
 }
 
 .webform .ds__2 {
@@ -1311,6 +1311,11 @@ h6 {
   margin-bottom: 30px;
 }
 
+.team-group .group-list__item .photo img {
+  width: 280px;
+  height: 280px;
+}
+
 .team-group .group-list__item .description .name {
   font-family: "Montserrat";
   color: #050C33;
@@ -1326,11 +1331,6 @@ h6 {
   line-height: 22px;
   color: #050C33;
   opacity: 0.7;
-}
-
-.team-group .group-list:after {
-  content: "";
-  width: 280px;
 }
 
 .team-group .entire__team {
