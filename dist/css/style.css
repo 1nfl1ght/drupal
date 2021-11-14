@@ -38,6 +38,14 @@
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700&display=swap&subset=cyrillic-ext);
 
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:500&display=swap&subset=cyrillic-ext);
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700&display=swap&subset=cyrillic-ext);
+
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:500&display=swap&subset=cyrillic-ext);
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700&display=swap&subset=cyrillic-ext);
+
 * {
   padding: 0;
   margin: 0;
@@ -1348,15 +1356,17 @@ h6 {
 }
 
 .reviews {
+  padding: 100px;
   background: url("../img/svg/right-quote-sign.svg") no-repeat left top;
   background-size: 26%;
 }
 
-.reviews-body {
-  padding-top: 150px;
+.reviews .caption {
+  margin-bottom: 110px;
 }
 
 .reviews-block {
+  position: relative;
   width: 980px;
   padding: 66px 0px 66px 66px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -1458,6 +1468,209 @@ h6 {
 
 .reviews-block .slick__arrows .slick-slide-num-current {
   color: #050c33;
+}
+
+.reviews-block::before {
+  content: "";
+  display: block;
+  background: #fff;
+  opacity: 0.5;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 4px 60px rgba(162, 162, 162, 0.25);
+          box-shadow: 0 4px 60px rgba(162, 162, 162, 0.25);
+  border-radius: 5px;
+  position: absolute;
+  top: -40px;
+  bottom: 0;
+  left: 64px;
+  right: 64px;
+  z-index: -1;
+}
+
+.reviews-block::after {
+  content: "";
+  display: block;
+  background: #fff;
+  opacity: 0.34;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 4px 60px rgba(162, 162, 162, 0.25);
+          box-shadow: 0 4px 60px rgba(162, 162, 162, 0.25);
+  border-radius: 5px;
+  position: absolute;
+  top: -72px;
+  bottom: 0;
+  left: 128px;
+  right: 128px;
+  z-index: -2;
+}
+
+.partners {
+  overflow: hidden;
+  padding: 50px;
+}
+
+.partners .description {
+  margin: 0px auto;
+  margin-bottom: 40px;
+  width: 740px;
+  text-align: center;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #050C33;
+  opacity: 0.7;
+}
+
+.partners .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.partners .partners-slider-1 {
+  margin: 10px 0px;
+}
+
+.partners .partners-slider-1 .slide--1 {
+  background: url("../img/png/partner1.png") no-repeat center;
+}
+
+.partners .partners-slider-1 .slide--2 {
+  background: url("../img/png/partner2.png") no-repeat center;
+}
+
+.partners .partners-slider-1 .slide--3 {
+  background: url("../img/png/partner3.png") no-repeat center;
+}
+
+.partners .partners-slider-1 .slide--4 {
+  background: url("../img/png/partner4.png") no-repeat center;
+}
+
+.partners .partners-slider-1 .slide--5 {
+  background: url("../img/png/partner2.png") no-repeat center;
+}
+
+.partners .partners-slider-1 .slide--6 {
+  background: url("../img/png/partner3.png") no-repeat center;
+}
+
+.partners .partners-slider-1 .slide--7 {
+  background: url("../img/png/partner4.png") no-repeat center;
+}
+
+.partners .partners-slider-1 .slide--8 {
+  background: url("../img/png/partner2.png") no-repeat center;
+}
+
+.partners .partners-slider-2 .slide--1 {
+  background: url("../img/png/partner1.png") no-repeat center;
+}
+
+.partners .partners-slider-2 .slide--2 {
+  background: url("../img/png/partner2.png") no-repeat center;
+}
+
+.partners .partners-slider-2 .slide--3 {
+  background: url("../img/png/partner3.png") no-repeat center;
+}
+
+.partners .partners-slider-2 .slide--4 {
+  background: url("../img/png/partner4.png") no-repeat center;
+}
+
+.partners .partners-slider-2 .slide--5 {
+  background: url("../img/png/partner2.png") no-repeat center;
+}
+
+.partners .partners-slider-2 .slide--6 {
+  background: url("../img/png/partner3.png") no-repeat center;
+}
+
+.partners .partners-slider-2 .slide--7 {
+  background: url("../img/png/partner4.png") no-repeat center;
+}
+
+.partners .partners-slider-2 .slide--8 {
+  background: url("../img/png/partner2.png") no-repeat center;
+}
+
+.partners .slider__item {
+  height: 155px;
+  border: 1px solid #E5E5E5;
+  border-radius: 5px;
+  margin: 0px 10px;
+}
+
+.faq {
+  padding: 40px 0px;
+  background: url(https://drupal-coder.ru/themes/bootstrap_dc/images/bg-faq.png) repeat center top;
+  background-attachment: fixed;
+}
+
+.faq .caption {
+  margin: 30px 0px 80px 0px;
+}
+
+.faq .faq-field .active {
+  border-color: #f14d34;
+}
+
+.faq .faq-field .active h3 {
+  color: #f14e3b;
+}
+
+.faq__item {
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  border: 3px solid transparent;
+  padding: 10px 12px 10px 30px;
+}
+
+.faq__item .faq__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.faq__item .faq__title span {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 12px;
+  color: #828a9b;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 4px;
+}
+
+.faq__item .faq__title h3 {
+  color: #050c33;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.22;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.faq__item .text {
+  display: none;
+}
+
+.faq__item .text p {
+  font-weight: 500;
+  font-size: 16px;
+  color: #4e5a73;
+  line-height: 1.37;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
 ._container {

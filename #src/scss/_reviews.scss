@@ -3,12 +3,16 @@
 $fontMont: "Montserrat";
 
 .reviews {
+    padding: 100px;
     background: url('../img/svg/right-quote-sign.svg') no-repeat left top;
     background-size: 26%;
+    .caption {
+        margin-bottom: 110px;
+    }
     &-body {
-        padding-top: 150px;
     }
     &-block {
+        position: relative;
         width: 980px;
         padding: 66px 0px 66px 66px;
         border: 1px solid rgba(0, 0, 0, 0.1);
@@ -90,5 +94,37 @@ $fontMont: "Montserrat";
             color: #050c33;
         }
     }
+    }
+    &-block::before {
+        content: "";
+        display: block;
+        background: #fff;
+        opacity: .5;
+        border: 1px solid rgba(0,0,0,.1);
+        box-sizing: border-box;
+        box-shadow: 0 4px 60px rgb(162 162 162 / 25%);
+        border-radius: 5px;
+        position: absolute;
+        top: -40px;
+        bottom: 0;
+        left: 64px;
+        right: 64px;
+        z-index: -1;
+    }
+    &-block::after {
+        content: "";
+        display: block;
+        background: #fff;
+        opacity: .34;
+        border: 1px solid rgba(0,0,0,.1);
+        box-sizing: border-box;
+        box-shadow: 0 4px 60px rgb(162 162 162 / 25%);
+        border-radius: 5px;
+        position: absolute;
+        top: -72px;
+        bottom: 0;
+        left: 128px;
+        right: 128px;
+        z-index: -2;
     }
 }
