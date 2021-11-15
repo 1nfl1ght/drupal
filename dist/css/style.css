@@ -930,7 +930,7 @@ h6 {
   height: 1px;
   opacity: 0.2;
   margin-top: 20px;
-  margin-bottom: 48px;
+  margin-bottom: 50px;
   background-color: black;
 }
 
@@ -975,6 +975,10 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 20px;
   position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -989,18 +993,49 @@ h6 {
   font-weight: 700;
 }
 
-.plans-item {
-  padding: 75px 60px 80px 60px;
+.plans .scaled {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0px 4px 60px rgba(162, 162, 162, 0.25);
+          box-shadow: 0px 4px 60px rgba(162, 162, 162, 0.25);
 }
 
-.plans-item span {
-  color: #050C33;
+.plans .scaled .plans__btn {
+  color: white;
+  background-color: #F14D34;
+}
+
+.plans .business-scale {
+  -webkit-transform: scale(0.93);
+      -ms-transform: scale(0.93);
+          transform: scale(0.93);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.plans .business-scale .plans__btn {
+  margin-top: 50px;
+  background-color: white;
+  color: #F14D34;
+}
+
+.plans-item {
+  padding: 70px 20px 60px;
+}
+
+.plans-item p {
+  color: #4e5972;
   font-family: "Montserrat";
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 20px;
   margin-left: 15px;
-  opacity: 0.7;
+}
+
+.plans-item .plan-wrapper {
+  width: 330px;
+  margin: 0px auto;
 }
 
 .plans__btn {
@@ -1008,7 +1043,7 @@ h6 {
   font-family: "Montserrat";
   font-size: 12px;
   font-weight: 500;
-  width: 270px;
+  width: 300px;
   height: 60px;
   border: 1px solid #F14D34;
   border-radius: 5px;
@@ -1017,89 +1052,84 @@ h6 {
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
-}
-
-.plans__btn:hover {
-  color: white;
-  background-color: #F14D34;
+  cursor: pointer;
 }
 
 .item__start {
   z-index: 1;
-  width: 390px;
+  width: 360px;
   height: 619px;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  margin-right: -8px;
+  margin-right: 15px;
   background: white;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .item__start .line {
   width: 270px;
 }
 
+.item__start .plan-wrapper {
+  width: 300px;
+  margin: 0px auto;
+}
+
 .item__business {
   z-index: 2;
-  width: 420px;
+  width: 390px;
   height: 665px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   -webkit-box-shadow: 0px 4px 60px rgba(162, 162, 162, 0.25);
           box-shadow: 0px 4px 60px rgba(162, 162, 162, 0.25);
   background: white;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .item__business .plans__btn {
-  width: 300px;
   margin-top: 50px;
+  background-color: #F14D34;
+  color: white;
 }
 
 .item__vip {
   z-index: 1;
-  width: 390px;
+  width: 360px;
   height: 619px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  margin-left: -10px;
+  margin-left: 15px;
   background: white;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .item__vip .line {
   width: 270px;
 }
 
-.item__price {
-  color: #050C33;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.item__price p {
-  font-family: "Montserrat";
-  font-size: 72px;
-  font-weight: 700;
-}
-
-.item__price span {
-  font-family: "Montserrat";
-  font-size: 28px;
-  font-weight: 500;
-  margin-top: 12px;
-  margin-left: 6px;
-}
-
-.item__price .time {
-  font-family: "Montserrat";
-  font-size: 16px;
-  font-weight: 500;
+.item__vip .plan-wrapper {
+  width: 330px;
+  margin: 0px auto;
 }
 
 .item__option {
   margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+}
+
+.item__option .checkmark {
+  width: 30px;
+  height: auto;
 }
 
 .cases {
@@ -1331,6 +1361,11 @@ h6 {
   line-height: 22px;
   color: #050C33;
   opacity: 0.7;
+}
+
+.team-group .group-list:after {
+  content: "";
+  width: 280px;
 }
 
 .team-group .entire__team {

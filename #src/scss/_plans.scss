@@ -14,7 +14,7 @@ $fontMont: "Montserrat";
         height: 1px;
         opacity: .2;
         margin-top: 20px;
-        margin-bottom: 48px;
+        margin-bottom: 50px;
         background-color: black;
     }
 
@@ -54,6 +54,8 @@ $fontMont: "Montserrat";
 
     &__items {
         display: flex;
+        justify-content: space-between;
+        padding: 0px 20px;
         position: relative;
         align-items: center;
         margin-bottom: 52px;
@@ -64,16 +66,36 @@ $fontMont: "Montserrat";
             font-weight: 700;
         }
     }
+    .scaled {
+        transform: scale(1.1);
+        box-shadow: 0px 4px 60px rgba(162, 162, 162, 0.25);
+        .plans__btn {
+            color: white;
+            background-color: #F14D34;
+        }
+    }
+    .business-scale {
+        transform: scale(0.93);
+        box-shadow: none;
+        .plans__btn {
+            margin-top: 50px;
+            background-color: white;
+            color: #F14D34;
+        }
+    }
     &-item {
-        padding: 75px 60px 80px 60px;
-        span {
-            color: #050C33;
+        padding: 70px 20px 60px;
+        p {
+            color: #4e5972;
             font-family: $fontMont;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 500;
             line-height: 20px;
             margin-left: 15px;
-            opacity: .7;
+        }
+        .plan-wrapper {
+            width: 330px;
+            margin: 0px auto;
         }
     }
     &__btn {
@@ -81,83 +103,77 @@ $fontMont: "Montserrat";
         font-family: $fontMont;
         font-size: 12px;
         font-weight: 500;
-        width: 270px;
+        width: 300px;
         height: 60px;
         border: 1px solid #F14D34;
         border-radius: 5px;
         margin-top: 20px;
         background-color: white;
         transition: .4s;
-    }
-    &__btn:hover {
-        color: white;
-        background-color: #F14D34;
+        cursor: pointer;
     }
 }
 
 .item {
     &__start {
         z-index: 1;
-        width: 390px;
+        width: 360px;
         height: 619px;
         border-radius: 5px;
         border: 1px solid rgba(0, 0, 0, 0.1);
-        margin-right: -8px;
+        margin-right: 15px;
         background: white;
         .line {
             width: 270px;
         }
+        .plan-wrapper {
+            width: 300px;
+            margin: 0px auto;
+        }
+        transition: .4s;
     }
 
     &__business {
         z-index: 2;
-        width: 420px;
+        width: 390px;
         height: 665px;
         border: 1px solid rgba(0, 0, 0, 0.1);
         border-radius: 5px;
         box-shadow: 0px 4px 60px rgba(162, 162, 162, 0.25);
         background: white;
         .plans__btn {
-            width: 300px;
             margin-top: 50px;
+            background-color: #F14D34;
+            color: white;
         }
+        transition: .4s;
     }
 
     &__vip {
         z-index: 1;
-        width: 390px;
+        width: 360px;
         height: 619px;
         border: 1px solid rgba(0, 0, 0, 0.1);
         border-radius: 5px;
-        margin-left: -10px;
+        margin-left: 15px;
         background: white;
         .line {
             width: 270px;
         }
+        .plan-wrapper {
+            width: 330px;
+            margin: 0px auto;
+        }
+        transition: .4s;
     }
-    &__price {
-        color: #050C33;
-        display: flex;
-        align-items: flex-start;
-        p {
-            font-family: $fontMont;
-            font-size: 72px;
-            font-weight: 700;
-        }
-        span {
-            font-family: $fontMont;
-            font-size: 28px;
-            font-weight: 500;
-            margin-top: 12px;
-            margin-left: 6px;
-        }
-        .time {
-            font-family: $fontMont;
-            font-size: 16px;
-            font-weight: 500;
-        }
-    }
+
     &__option {
         margin-bottom: 20px;
+        display: flex;
+        width: 300px;
+        .checkmark {
+            width: 30px;
+            height: auto;
+        }
     }
 }

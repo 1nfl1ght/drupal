@@ -92,10 +92,10 @@ $fontMont: "Montserrat";
             }
 		}
     }
-    // .group-list:after {
-    //     content: "";
-    //     width: 280px;
-    // }
+    .group-list:after {
+        content: "";
+        width: 280px;
+    }
 
     .entire__team {
         font-family: $fontMont;
