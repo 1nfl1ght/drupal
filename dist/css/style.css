@@ -994,9 +994,9 @@ h6 {
 }
 
 .plans .scaled {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.08);
+      -ms-transform: scale(1.08);
+          transform: scale(1.08);
   -webkit-box-shadow: 0px 4px 60px rgba(162, 162, 162, 0.25);
           box-shadow: 0px 4px 60px rgba(162, 162, 162, 0.25);
 }
@@ -1115,7 +1115,7 @@ h6 {
 }
 
 .item__vip .plan-wrapper {
-  width: 330px;
+  width: 300px;
   margin: 0px auto;
 }
 
