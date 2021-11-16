@@ -147,7 +147,7 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  z-index: 3;
+  z-index: 4;
   height: 88px;
   position: relative;
   -webkit-box-align: center;
@@ -210,7 +210,6 @@ h6 {
 
 .menu__list .administering {
   position: relative;
-  z-index: 10;
 }
 
 .menu__list .administering-submenu {
@@ -315,7 +314,7 @@ h6 {
 .header__content {
   color: white;
   position: relative;
-  z-index: 1;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
