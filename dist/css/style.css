@@ -147,7 +147,7 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  z-index: 3;
+  z-index: 4;
   height: 88px;
   position: relative;
   -webkit-box-align: center;
@@ -159,6 +159,19 @@ h6 {
   z-index: 2;
   position: absolute;
   top: 0;
+}
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 4px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid white;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  cursor: pointer;
 }
 
 .header__video {
@@ -174,6 +187,31 @@ h6 {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  padding: 10px 0px;
+  background: #f04d35;
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+}
+
+.submenu a {
+  padding: 5px 20px;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+.submenu a:hover {
+  background: #D03018;
 }
 
 .menu__logo {
@@ -192,7 +230,6 @@ h6 {
 
 .menu__list a {
   position: relative;
-  opacity: 0.8;
 }
 
 .menu__list a::after {
@@ -213,33 +250,20 @@ h6 {
   z-index: 10;
 }
 
-.menu__list .administering-submenu {
+.menu__list .administering .submenu {
   width: 230px;
-  display: none;
-  position: absolute;
-  padding: 15px 0px;
-  background: #f04d35;
-  font-family: "Montserrat";
-  font-size: 12px;
-  font-weight: 500;
-  color: white;
 }
 
-.menu__list .administering-submenu a {
-  padding: 5px 20px;
-  -webkit-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-  width: 100%;
-  display: block;
-  cursor: pointer;
+.menu__list .about {
+  position: relative;
+  z-index: 10;
 }
 
-.menu__list .administering-submenu a:hover {
-  background: #D03018;
+.menu__list .about .submenu {
+  width: 150px;
 }
 
-.menu__list .administering:hover .administering-submenu {
+.menu__list .administering:hover .submenu {
   display: block;
 }
 
@@ -247,12 +271,16 @@ h6 {
   width: 0%;
 }
 
-.menu__list a:hover::after {
-  width: 100%;
+.menu__list .about:hover .submenu {
+  display: block;
 }
 
-.menu__list a:hover {
-  opacity: 1;
+.menu__list .about a:hover::after {
+  width: 0%;
+}
+
+.menu__list a:hover::after {
+  width: 100%;
 }
 
 .menu__link {
@@ -315,7 +343,7 @@ h6 {
 .header__content {
   color: white;
   position: relative;
-  z-index: 1;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -485,6 +513,7 @@ h6 {
 }
 
 .webform__body .body__info .info__number {
+  cursor: pointer;
   font-family: "Montserrat";
   font-weight: 700;
   font-size: 32px;
@@ -492,6 +521,7 @@ h6 {
 }
 
 .webform__body .body__info .info__mail {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -530,6 +560,20 @@ h6 {
   padding-left: 35px;
 }
 
+.webform__body .body__form .form__checkbox .checkbox__label a {
+  color: #f14d34;
+  cursor: pointer;
+}
+
+.webform__body .body__form .form__checkbox .checkbox__label a:hover {
+  text-decoration: underline;
+}
+
+.webform__body .body__form .form__checkbox .checkbox__label span {
+  font-size: 18px;
+  color: red;
+}
+
 .webform__body .body__form .form__checkbox .checkbox__label::before {
   content: "";
   display: block;
@@ -544,6 +588,9 @@ h6 {
   top: 0;
   left: 0;
   z-index: 1;
+  -webkit-transform: rotate();
+      -ms-transform: rotate();
+          transform: rotate();
 }
 
 .webform__body .body__form .form__checkbox .checkbox__label::after {
@@ -552,19 +599,30 @@ h6 {
   width: 25px;
   height: 25px;
   background: url("../img/svg/Group2.svg") no-repeat center;
-  background-size: 15px 15px;
+  background-size: 12px 10px;
   opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
-  -webkit-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 5px;
+  -webkit-transform: rotate(-40deg);
+      -ms-transform: rotate(-40deg);
+          transform: rotate(-40deg);
 }
 
 .webform__body .body__form .form__checkbox .checkbox__input:checked + .checkbox__label::after {
   opacity: 1;
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.webform__body .body__form .form__checkbox .checkbox__input:checked:focus + .checkbox__label::before {
+  border-color: #f14d34;
   -webkit-box-shadow: 0px 0px 8px #f14d34;
           box-shadow: 0px 0px 8px #f14d34;
 }
@@ -1499,6 +1557,7 @@ h6 {
   font-size: 14px;
   line-height: 17px;
   color: #050C33;
+  text-decoration: underline;
 }
 
 .reviews-block .slick-track {
