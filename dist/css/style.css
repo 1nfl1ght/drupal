@@ -208,6 +208,43 @@ h6 {
   transition: width 0.4s;
 }
 
+.menu__list li .administering {
+  position: relative;
+  z-index: 10;
+}
+
+.menu__list li .administering-submenu {
+  display: none;
+  margin-top: 3px;
+  position: absolute;
+  padding: 15px 0px;
+  background: #f04d35;
+  font-family: "Ubuntu";
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+}
+
+.menu__list li .administering-submenu li {
+  padding: 5px 20px;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  width: 100%;
+}
+
+.menu__list li .administering-submenu li:hover {
+  background: #D03018;
+}
+
+.menu__list .administering:hover::after {
+  width: 0%;
+}
+
+.menu__list .administering:hover ~ .administering-submenu {
+  display: block;
+}
+
 .menu__list a:hover::after {
   width: 100%;
 }
@@ -276,7 +313,7 @@ h6 {
 .header__content {
   color: white;
   position: relative;
-  z-index: 3;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
