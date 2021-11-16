@@ -62,39 +62,41 @@ $mainColor: #F14D34;
             background-color: #F14D34;
             transition: width .4s;
         }
-        li {
-            .administering {
-                position: relative;
-                z-index: 10;
-                &-submenu {
-                    display: none;
-                    margin-top: 3px;
-                    position: absolute;
-                    padding: 15px 0px;
-                    background: #f04d35;
-                    font-family: $fontUbuntu;
-                    font-size: 12px;
-                    font-weight: 500;
-                    color: white;
-                    li {
-                        padding: 5px 20px;
-                        transition: .4s;
-                        width: 100%;
-                    }
-                    li:hover {
-                        background: #D03018;
-                    }
+        .administering {
+            position: relative;
+            z-index: 10;
+            &-submenu {
+                width: 230px;
+                display: none;
+                position: absolute;
+                padding: 15px 0px;
+                background: #f04d35;
+                font-family: $fontMont;
+                font-size: 12px;
+                font-weight: 500;
+                color: white;
+                a {
+                    padding: 5px 20px;
+                    transition: .4s;
+                    width: 100%;
+                    display: block;
+                    cursor: pointer;
+                }
+                a:hover {
+                    background: #D03018;
                 }
             }
         }
-        .administering:hover::after {
-            width: 0%;
-        }
         .administering:hover {
-            ~ .administering-submenu {
+            .administering-submenu{
                 display: block;
             }
-        } 
+        }
+        .administering {
+            a:hover::after {
+                width: 0%;
+            }
+        }    
         a:hover::after {
             width: 100%;
         }
@@ -103,7 +105,7 @@ $mainColor: #F14D34;
         }
     }
     &__link {
-        font-family: $fontUbuntu;
+        font-family: $fontMont;
         font-size: 12px;
         font-weight: 500;
         color: white;

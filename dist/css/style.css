@@ -208,41 +208,43 @@ h6 {
   transition: width 0.4s;
 }
 
-.menu__list li .administering {
+.menu__list .administering {
   position: relative;
   z-index: 10;
 }
 
-.menu__list li .administering-submenu {
+.menu__list .administering-submenu {
+  width: 230px;
   display: none;
-  margin-top: 3px;
   position: absolute;
   padding: 15px 0px;
   background: #f04d35;
-  font-family: "Ubuntu";
+  font-family: "Montserrat";
   font-size: 12px;
   font-weight: 500;
   color: white;
 }
 
-.menu__list li .administering-submenu li {
+.menu__list .administering-submenu a {
   padding: 5px 20px;
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
   width: 100%;
+  display: block;
+  cursor: pointer;
 }
 
-.menu__list li .administering-submenu li:hover {
+.menu__list .administering-submenu a:hover {
   background: #D03018;
 }
 
-.menu__list .administering:hover::after {
-  width: 0%;
+.menu__list .administering:hover .administering-submenu {
+  display: block;
 }
 
-.menu__list .administering:hover ~ .administering-submenu {
-  display: block;
+.menu__list .administering a:hover::after {
+  width: 0%;
 }
 
 .menu__list a:hover::after {
@@ -254,7 +256,7 @@ h6 {
 }
 
 .menu__link {
-  font-family: "Ubuntu";
+  font-family: "Montserrat";
   font-size: 12px;
   font-weight: 500;
   color: white;
