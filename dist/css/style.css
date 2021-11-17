@@ -173,6 +173,10 @@ h6 {
   left: 0;
 }
 
+.header__burger {
+  display: none;
+}
+
 .caret {
   display: inline-block;
   width: 0;
@@ -1824,4 +1828,45 @@ h6 {
   color: #050C33;
   margin-bottom: 20px;
   line-height: 51px;
+}
+
+@media (max-width: 480px) {
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+  }
+
+  .header__burger::before,
+  .header__burger::after {
+    content: "";
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+  }
+
+  .header__burger span {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+  }
+
+  .header__burger::before {
+    top: 0;
+  }
+
+  .header__burger::after {
+    bottom: 0;
+  }
+
+  .header__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
 }

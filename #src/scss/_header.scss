@@ -29,7 +29,9 @@ $mainColor: #F14D34;
         top: 0;
         left: 0;
     }
-    
+    &__burger {
+        display: none;
+    }
 }
 
 .caret {
@@ -280,5 +282,42 @@ $mainColor: #F14D34;
     }
     &__tariffs:hover {
         background-color: $mainColor;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+    }
+    .header__burger::before, .header__burger::after {
+        content: '';
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+    }
+    .header__burger {
+        span {
+            position: absolute;
+            background-color: white;
+            width: 100%;
+            height: 2px;
+            top: 9px;
+        }
+    }
+    .header__burger::before {
+        top: 0;
+    }
+    .header__burger::after {
+        bottom: 0;
+    }
+    .header__menu {
+        position: fixed;
+        top: 0;
+        left: 0;
     }
 }
