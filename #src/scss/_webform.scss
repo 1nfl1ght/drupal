@@ -34,12 +34,14 @@ $fontMont: "Montserrat";
                     }
                 }
                 .info__number {
+                    cursor: pointer;
                     font-family: $fontMont;
                     font-weight: 700;
                     font-size: 32px;
                     margin-bottom: 30px;
                 }
                 .info__mail {
+                    cursor: pointer;
                     display: flex;
                     align-items: center;
                     font-family: $fontMont;
@@ -66,6 +68,17 @@ $fontMont: "Montserrat";
                         font-weight: 400;
                         line-height: 14px;
                         padding-left: 35px;
+                        a {
+                            color: #f14d34;
+                            cursor: pointer;
+                        }
+                        a:hover{
+                            text-decoration: underline;
+                        }
+                        span {
+                            font-size: 18px;
+                            color: red;
+                        }
                     }
                     .checkbox__label::before {
                         content: "";
@@ -80,6 +93,7 @@ $fontMont: "Montserrat";
                         top: 0;
                         left: 0;
                         z-index: 1;
+                        transform: rotate();
                     }
                     .checkbox__label::after {
                         content: "";
@@ -87,16 +101,22 @@ $fontMont: "Montserrat";
                         width: 25px;
                         height: 25px;
                         background: url("../img/svg/Group2.svg") no-repeat center;
-                        background-size: 15px 15px;
+                        background-size: 12px 10px;
                         opacity: 0;
                         position: absolute;
                         top: 0;
                         left: 0;
                         z-index: 2;
-                        transition: .4s;
+                        transition: .3s;
+                        border-radius: 5px;
+                        transform: rotate(-40deg)
                     }
                     .checkbox__input:checked + .checkbox__label::after{
                         opacity: 1;
+                        transform: rotate(0);
+                    }
+                    .checkbox__input:checked:focus + .checkbox__label::before{
+                        border-color: #f14d34;
                         box-shadow: 0px 0px 8px #f14d34;
                     }
                 }
