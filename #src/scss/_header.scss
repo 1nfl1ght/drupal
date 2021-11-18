@@ -19,6 +19,7 @@ $mainColor: #F14D34;
         z-index: 2;
         position: absolute;
         top: 0;
+        background: url('img/png/druplicon.png') no-repeat;
     }
     .video__media{
         width: 100%;
@@ -151,32 +152,6 @@ $mainColor: #F14D34;
     }
 }
 
-.number {
-    &__elem {
-        display: flex;
-        align-items: center;
-        .select {
-            color: white;
-            font-family: $fontMont;
-            font-weight: 700;
-            font-size: 14px;
-            width: 46px;
-            height: 20px;
-            appearance: none;
-            background: url("../img/svg/arrow-lang.svg") 96% / 22% no-repeat;
-            option {
-                color: black;
-                font-family: $fontMont;
-                border-radius: 10px;
-            }
-        }
-        .select:hover {
-            cursor: pointer;
-        }
-    }
-    
-}
-
 .header {
     &__content {
         color: white;
@@ -219,7 +194,7 @@ $mainColor: #F14D34;
             position: relative;
             height: 92px;
             width: 135px;
-            margin: 60px 40px 50px 0px;
+            margin: 60px 40px 0px 0px;
             padding-top: 21px;
             span{
                 font-family: $fontMont;
@@ -319,5 +294,51 @@ $mainColor: #F14D34;
         position: fixed;
         top: 0;
         left: 0;
+        display: none;
+    }
+    ._container {
+        width: 100%;
+        padding: 0px 5px;
+    }
+    .header__pandaimg {
+        img {
+            height: 400px;
+            width: 400px;
+        }
+    }
+    .header {
+        height: 950px;
+        &__content {
+            width: 100%;
+            flex-direction: column;
+            padding: 0px 30px;
+            .content__info {
+                width: 100%;
+                margin: 0px;
+                h1 {
+                    width: 280px;
+                    margin: 50px auto;
+                    font-size: 30px;
+                }
+                .info__tariffs {
+                    margin: 55px auto 0px;
+                }
+                p {
+                    width: 400px;
+                    font-size: 14px;
+                    opacity: .7;
+                }
+            }
+        }
+        text-align: center;
+        .content__achievements {
+            margin-top: 40px;
+            justify-content: space-between;
+            .achievements__elem {
+                text-align: start;
+                margin-right: 0px;
+            }
+        }
+        
     }
 }
