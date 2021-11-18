@@ -39,7 +39,8 @@ let {src, dest}= require('gulp'),
     clean_css = require("gulp-clean-css"),
     rename = require("gulp-rename"),
     uglify = require("gulp-uglify-es").default,
-    imagemin = require("gulp-imagemin");
+    imagemin = require("gulp-imagemin"),
+    ghPages = require('gulp-gh-pages');
 
 function browserSync() {
     browsersync.init({
@@ -127,11 +128,10 @@ function watchFiles() {
     gulp.watch([path.watch.img], images);
 }
 
-// gulp.task('default', function () {
-//     gulp.src('index.html')
-//         .pipe(video64())
-//         .pipe(gulp.dest('path'));
-// })
+gulp.task('deploy', function() {
+    return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
 
 function clean() {
     return del(path.clean);
