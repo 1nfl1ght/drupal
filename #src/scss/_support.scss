@@ -67,7 +67,7 @@ $bgSvgs: ( "item1" : url("../img/svg/support1.svg") no-repeat, "item2" : url("..
         background: $url;
         position: absolute;
         right: 0;
-        bottom: 0;
+        bottom: -2px;
         }
     }
     &__pandaimg {
@@ -128,4 +128,21 @@ $bgSvgs: ( "item1" : url("../img/svg/support1.svg") no-repeat, "item2" : url("..
             }
         }
     }
+}
+
+@media (max-width: 480px) {
+    .support {
+        &__body {
+            margin: 0px;
+            h2 {
+                font-size: 30px;
+                width: 250px;
+                line-height: 35px;
+            }
+        }
+        &__elem {
+            width: 100%;
+        }
+    }
+    
 }

@@ -19,7 +19,6 @@ $mainColor: #F14D34;
         z-index: 2;
         position: absolute;
         top: 0;
-        background: url('img/png/druplicon.png') no-repeat;
     }
     .video__media{
         width: 100%;
@@ -311,7 +310,7 @@ $mainColor: #F14D34;
         &__content {
             width: 100%;
             flex-direction: column;
-            padding: 0px 30px;
+            padding: 0px 20px;
             .content__info {
                 width: 100%;
                 margin: 0px;
@@ -324,7 +323,6 @@ $mainColor: #F14D34;
                     margin: 55px auto 0px;
                 }
                 p {
-                    width: 400px;
                     font-size: 14px;
                     opacity: .7;
                 }
@@ -337,6 +335,7 @@ $mainColor: #F14D34;
             .achievements__elem {
                 text-align: start;
                 margin-right: 0px;
+                margin-left: 10px;
             }
         }
         
