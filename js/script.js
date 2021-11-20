@@ -42,6 +42,17 @@ $('.partners-slider-1').slick({
     autoplay: true,
     autoplaySpeed: 2000,
     speed: 500,
+    responsive:[
+        {
+        breakpoint: 480,
+        settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            centerMode: false,
+            variableWidth: true,
+        }
+    }
+    ],
 });
 $('.partners-slider-2').slick({
     arrows: false,
@@ -51,6 +62,18 @@ $('.partners-slider-2').slick({
     autoplay: true,
     autoplaySpeed: 2000,
     speed: 500,
+    responsive:[
+        {
+        breakpoint: 480,
+        settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            centerMode: true,
+            focusOnSelect: true,
+            variableWidth: true,
+        }
+    }
+    ],
 });
 
 $('.faq__title').click(function(event) {
@@ -60,5 +83,12 @@ $('.faq__title').click(function(event) {
     }
     $(this).next().slideToggle(300); //.toggleClass('active')
     $(this).parent().toggleClass('active');
+});
+$("a.to__tarrifs").on("click", function(e){
+    e.preventDefault();
+    var anchor = $(this).attr('href');
+    $('html, body').stop().animate({
+        scrollTop: $(anchor).offset().top - 60
+    }, 800);
 });
 });
