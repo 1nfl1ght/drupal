@@ -173,10 +173,6 @@ $fontMont: "Montserrat";
         margin-bottom: 12px;
         padding-bottom: 65px;
     }
-    // #comment::placeholder { 
-    //     position: absolute;
-    //     top: 23px;
-    // }
 
     #form__button {
         color: white;
@@ -213,6 +209,62 @@ $fontMont: "Montserrat";
             p {
                 margin-bottom: 6px;
             }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .webform {
+        height: 1100px;
+        &__body {
+            flex-direction: column;
+            padding: 0px 20px;
+            .body__info {
+                width: 100%;
+                margin-top: 50px;
+                .info__text {
+                    h2 {
+                        font-size: 25px;
+                        text-align: center;
+                        line-height: 35px;
+                    }
+                    p {
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+            .body__form {
+                margin-top: 40px;
+                width: 100%;
+                .form__elem {
+                    width: 100%;
+                }
+                #form__button {
+                    width: 100%;
+                }
+                #form__button:hover {
+                    background-color: #f14d34;
+                }
+            }
+        }
+        .ds {
+            &__1 {
+                left: 30%;
+                svg {
+                    width: 200px;
+                    height: 150px;
+                }
+            }
+    
+            &__2 {
+                svg {
+                    width: 150px;
+                    height: 70px;
+                }
+            }
+        }
+        footer {
+            padding: 0px 20px;
         }
     }
 }

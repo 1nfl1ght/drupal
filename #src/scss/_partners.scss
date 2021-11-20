@@ -43,3 +43,16 @@ $slides: ("1" : url("../img/png/partner1.png") no-repeat center, "2" : url("../i
         margin: 0px 10px;
     }
 }
+
+@media (max-width: 480px) {
+    .partners {
+        .slider__item {
+            height: 100px;
+            width: 200px;
+        }
+        .description {
+            width: 100%;
+            text-align: start;
+        }
+    }
+}

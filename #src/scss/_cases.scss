@@ -107,3 +107,36 @@ $fontMont: "Montserrat";
         margin: 20px auto;
     }
 }
+
+@media (max-width: 480px) {
+    .cases {
+        &__body {
+            padding: 0px 20px;
+            h2 {
+                font-size: 25px;
+            }
+            .w380 {
+                width: 100%;
+                height: 440px;
+                overflow: hidden;
+                border-radius: 5px;
+                img {
+                    width: 100%;
+                }
+                .cases__text {
+                    padding-top: 0px;
+                    padding-bottom: 20px;
+                }
+            }
+            .w780 {
+                width: 100%;
+                height: 440px;
+                overflow: hidden;
+                img {
+                    height: 440px;
+                }
+                border-radius: 5px;
+            }
+        }
+    }
+}

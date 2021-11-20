@@ -139,7 +139,6 @@ $fontMont: "Montserrat";
         height: 665px;
         border: 1px solid rgba(0, 0, 0, 0.1);
         border-radius: 5px;
-        box-shadow: 0px 4px 60px rgba(162, 162, 162, 0.25);
         background: white;
         .plans__btn {
             margin-top: 50px;
@@ -174,6 +173,59 @@ $fontMont: "Montserrat";
         .checkmark {
             width: 30px;
             height: auto;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .plans {
+        .scaled {
+            transform: scale(1);
+            box-shadow: none;
+            .plans__btn {
+                background-color: #F14D34;
+            }
+        }
+        .business-scale {
+            transform: scale(1);
+            box-shadow: none;
+        }
+        &__body { 
+            padding: 100px 20px 50px 20px;
+            h2 {
+                font-size: 25px;
+                margin-bottom: 20px;
+            }
+            >p {
+                width: 100%;
+                font-size: 16px;
+                line-height: 22px;
+            }
+            .plans__items {
+                flex-direction: column;
+                padding: 0px;
+                .plans-item {
+                    .plan-wrapper {
+                        width: 330px;
+                    }
+                    padding: 30px 10px 20px;
+                    margin: 10px 0px;
+                    width: 100%;
+                    height: auto;
+                    p {
+                        font-size: 14px;
+                    }
+                    .checkmark {
+                        width: 20px;
+                    }
+                    .plans__btn {
+                        margin: 0px auto;
+                        background-color: #F14D34;
+                        color: white;
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }

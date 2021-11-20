@@ -9,8 +9,6 @@ $fontMont: "Montserrat";
     .caption {
         margin-bottom: 110px;
     }
-    &-body {
-    }
     &-block {
         position: relative;
         width: 980px;
@@ -125,5 +123,34 @@ $fontMont: "Montserrat";
         left: 128px;
         right: 128px;
         z-index: -2;
+    }
+}
+
+@media (max-width: 480px) {
+    .reviews {
+        padding: 20px;
+        &-body {
+            .reviews-block {
+                width: 100%;
+                flex-direction: column;
+                padding: 40px 10px;
+                .slider {
+                    border-right: none;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                    padding: 0px;
+                    width: 100%;
+                    padding: 0px 10px 30px;
+                    .comment {
+                        width: 100%;
+                    }
+                    .person {
+                        width: 100%;
+                    }
+                }
+                .slick__arrows {
+                    margin-top: 20px;
+                }
+            }
+        }
     }
 }

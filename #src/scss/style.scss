@@ -39,3 +39,11 @@ $fontUbuntu: "Ubuntu";
         line-height: 51px;
     }
 }
+
+@media (max-width: 480px) {
+    .caption {
+        h2 {
+            font-size: 25px;
+        }
+    }
+}
