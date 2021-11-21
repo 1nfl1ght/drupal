@@ -4,4 +4,5 @@ $(document).ready(function() {
 @@include('partners_slider.js')
 @@include('faq.js')
 @@include('smooth_scroll.js')
+@@include('component.js')
 });

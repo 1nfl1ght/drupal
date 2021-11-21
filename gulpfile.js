@@ -40,7 +40,8 @@ let {src, dest}= require('gulp'),
     rename = require("gulp-rename"),
     uglify = require("gulp-uglify-es").default,
     imagemin = require("gulp-imagemin"),
-    ghPages = require('gulp-gh-pages');
+    ghPages = require('gulp-gh-pages'),
+    babel = require('gulp-babel');
 
 function browserSync() {
     browsersync.init({
@@ -131,6 +132,14 @@ function watchFiles() {
 gulp.task('deploy', function() {
     return gulp.src('./dist/**/*')
     .pipe(ghPages());
+});
+
+gulp.task("babel", function(){
+    return gulp.src(source_folder + "/jsx/**/*.jsx").
+        pipe(babel({
+            plugins: ['transform-react-jsx']
+        })).
+        pipe(gulp.dest(source_folder + "/js/"));
 });
 
 function clean() {
