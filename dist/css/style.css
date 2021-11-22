@@ -1174,8 +1174,11 @@ h6 {
 }
 
 .item__option .checkmark {
-  width: 30px;
   height: auto;
+}
+
+.item__option p {
+  margin-left: 25px;
 }
 
 .cases {

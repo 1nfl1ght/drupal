@@ -171,8 +171,10 @@ $fontMont: "Montserrat";
         display: flex;
         width: 300px;
         .checkmark {
-            width: 30px;
             height: auto;
+        }
+        p {
+            margin-left: 25px;
         }
     }
 }
