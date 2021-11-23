@@ -4,7 +4,7 @@ $fontMont: "Montserrat";
 
 .webform {
     background: linear-gradient(261.2deg, rgba(255, 255, 255, 0.276) -114.85%, rgba(255, 255, 255, 0) 69.04%), #040613;
-    height: 816px;
+    height: 900px;
     position: relative;
     color: white;
     .space {
@@ -124,6 +124,9 @@ $fontMont: "Montserrat";
                         box-shadow: 0px 0px 8px #f14d34;
                     }
                 }
+                .g-recaptcha {
+                    margin: 20px 0px 20px 0px;
+                }
         }
     }
     
@@ -222,7 +225,7 @@ $fontMont: "Montserrat";
         .space {
             display: block;
         }
-        height: 1150px;
+        height: 1250px;
         &__body {
             flex-direction: column;
             padding: 0px 20px;
