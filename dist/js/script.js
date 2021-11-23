@@ -104,5 +104,8 @@ $("a.to__tarrifs").on("click", function(e){
     }, 800);
 });
 });
-const MyComponent = React.createElement("div", null, React.createElement("h1", null, "Blog Title"), React.createElement("p", null, "Here is the blog description."));
-ReactDOM.render(MyComponent, document.getElementById("root"));
+$(document).ready(function () {
+    $('.header__burger').click(function (event) { 
+        $('.menu__body').toggleClass('active');
+    });
+})

@@ -71,6 +71,7 @@ $mainColor: #F14D34;
 .menu {
     &__logo {
         margin-right: 60px;
+        z-index: 10;
     }
 
     &__list {
@@ -259,8 +260,18 @@ $mainColor: #F14D34;
     .header__burger {
         display: block;
         position: relative;
-        width: 30px;
-        height: 20px;
+        width: 22px;
+        height: 14px;
+        z-index: 10;
+        span {
+            position: absolute;
+            background-color: white;
+            width: 100%;
+            height: 2px;
+            top: 6px;
+            left: 0;
+            opacity: .5;
+        }
     }
     .header__burger::before, .header__burger::after {
         content: '';
@@ -269,15 +280,7 @@ $mainColor: #F14D34;
         width: 100%;
         height: 2px;
         left: 0;
-    }
-    .header__burger {
-        span {
-            position: absolute;
-            background-color: white;
-            width: 100%;
-            height: 2px;
-            top: 9px;
-        }
+        opacity: .5;
     }
     .header__burger::before {
         top: 0;
@@ -287,9 +290,74 @@ $mainColor: #F14D34;
     }
     .header__menu {
         position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        height: 48px;
+        justify-content: space-between;
+        padding: 0px 10px;
+    }
+    .menu__body {
+        position: fixed;
+        width: 100%;
+        height: 700px;
+        bottom: -100%;
+        left: 0;
+        background-color: #424242;
+        z-index: 4;
+        transition: .5s;
+        .menu__list {
+            flex-direction: column;
+            text-align:initial;
+            li {
+                width: 100%;
+                border-bottom: 1px solid black;
+                padding: 8px 20px;
+                height: 39px;
+            }
+            li:first-child {
+                a {
+                    color: #F14D34;
+                }
+            }
+            .administering {
+                margin-bottom: 195px;
+            }
+            .about {
+                margin-bottom: 195px;
+            }
+            .submenu {
+                margin-top: 15px;
+                width: 100%;
+                display: block;
+                margin-left: -20px;
+                background-color: #424242;
+                padding: 0px;
+                border-top: 1px solid black;
+                box-shadow: 0 5px 15px rgb(0 0 0 / 60%);
+                a {
+                    display: block;
+                    height: 39px;
+                    padding: 8px 20px;
+                    padding-left: 40px;
+                    border-bottom: 1px solid black;
+                }
+            }
+        }
+    }
+    .active {
+        bottom: 0;
+    }
+    .header__menu::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
         top: 0;
         left: 0;
-        display: none;
+        background-color: #424242;
+        z-index: 10;
+        border-top: 1px solid black;
     }
     .header__pandaimg {
         img {

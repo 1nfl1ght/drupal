@@ -3,4 +3,4 @@
 @@include('partners_slider.js')
 @@include('faq.js')
 @@include('smooth_scroll.js')
-@@include('component.js')
+@@include('header_burger.js')

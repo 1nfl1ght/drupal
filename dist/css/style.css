@@ -217,6 +217,7 @@ h6 {
 
 .menu__logo {
   margin-right: 60px;
+  z-index: 10;
 }
 
 .menu__list {
@@ -426,6 +427,11 @@ h6 {
   height: 816px;
   position: relative;
   color: white;
+}
+
+.webform .space {
+  height: 48px;
+  display: none;
 }
 
 .webform__body {
@@ -664,7 +670,6 @@ h6 {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   height: 150px;
   font-family: "Montserrat";
-  font-weight: regular;
   bottom: 0;
   width: 100%;
   position: absolute;
@@ -675,6 +680,7 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0px 40px;
 }
 
 .webform footer .footer__text {
@@ -921,7 +927,7 @@ h6 {
 .scnd-block .support__scnd {
   padding-top: 205px;
   position: relative;
-  z-index: 10;
+  z-index: 4;
 }
 
 .scnd-block .support__scnd .explanations {
@@ -1474,6 +1480,7 @@ h6 {
   -o-transition: 0.4s;
   transition: 0.4s;
   overflow: hidden;
+  z-index: 4;
 }
 
 .reviews-block .slider__item .comment {
@@ -1797,8 +1804,19 @@ h6 {
   .header__burger {
     display: block;
     position: relative;
-    width: 30px;
-    height: 20px;
+    width: 22px;
+    height: 14px;
+    z-index: 10;
+  }
+
+  .header__burger span {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 2px;
+    top: 6px;
+    left: 0;
+    opacity: 0.5;
   }
 
   .header__burger::before,
@@ -1809,14 +1827,7 @@ h6 {
     width: 100%;
     height: 2px;
     left: 0;
-  }
-
-  .header__burger span {
-    position: absolute;
-    background-color: white;
-    width: 100%;
-    height: 2px;
-    top: 9px;
+    opacity: 0.5;
   }
 
   .header__burger::before {
@@ -1829,9 +1840,90 @@ h6 {
 
   .header__menu {
     position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    height: 48px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0px 10px;
+  }
+
+  .menu__body {
+    position: fixed;
+    width: 100%;
+    height: 700px;
+    bottom: -100%;
+    left: 0;
+    background-color: #424242;
+    z-index: 4;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+  }
+
+  .menu__body .menu__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: initial;
+  }
+
+  .menu__body .menu__list li {
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding: 8px 20px;
+    height: 39px;
+  }
+
+  .menu__body .menu__list li:first-child a {
+    color: #F14D34;
+  }
+
+  .menu__body .menu__list .administering {
+    margin-bottom: 195px;
+  }
+
+  .menu__body .menu__list .about {
+    margin-bottom: 195px;
+  }
+
+  .menu__body .menu__list .submenu {
+    margin-top: 15px;
+    width: 100%;
+    display: block;
+    margin-left: -20px;
+    background-color: #424242;
+    padding: 0px;
+    border-top: 1px solid black;
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  }
+
+  .menu__body .menu__list .submenu a {
+    display: block;
+    height: 39px;
+    padding: 8px 20px;
+    padding-left: 40px;
+    border-bottom: 1px solid black;
+  }
+
+  .active {
+    bottom: 0;
+  }
+
+  .header__menu::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    display: none;
+    background-color: #424242;
+    z-index: 10;
+    border-top: 1px solid black;
   }
 
   .header__pandaimg img {
@@ -1891,7 +1983,11 @@ h6 {
   }
 
   .webform {
-    height: 1100px;
+    height: 1150px;
+  }
+
+  .webform .space {
+    display: block;
   }
 
   .webform__body {
@@ -1949,6 +2045,7 @@ h6 {
   }
 
   .webform footer {
+    height: 200px;
     padding: 0px 20px;
   }
 
@@ -2108,10 +2205,6 @@ h6 {
 
   .plans__body .plans__items .plans-item p {
     font-size: 14px;
-  }
-
-  .plans__body .plans__items .plans-item .checkmark {
-    width: 20px;
   }
 
   .plans__body .plans__items .plans-item .plans__btn {
