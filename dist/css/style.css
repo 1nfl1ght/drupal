@@ -1545,12 +1545,12 @@ h6 {
 }
 
 .reviews-block .slick__arrows .slick-prev {
-  background: url("https://drupal-coder.ru/themes/bootstrap_dc/images/arrow-left.svg") no-repeat center;
+  background: url("https://drupal-coder.ru/themes/custom/bootstrap_dc/images/arrow-left.svg") no-repeat center;
   background-size: contain;
 }
 
 .reviews-block .slick__arrows .slick-next {
-  background: url("https://drupal-coder.ru/themes/bootstrap_dc/images/arrow-right.svg") no-repeat center;
+  background: url("https://drupal-coder.ru/themes/custom/bootstrap_dc/images/arrow-right.svg") no-repeat center;
   background-size: contain;
 }
 
@@ -1705,7 +1705,7 @@ h6 {
 
 .faq {
   padding: 40px 0px;
-  background: url(https://drupal-coder.ru/themes/bootstrap_dc/images/bg-faq.png) repeat center top;
+  background: url(../img/png/bg-faq.png) repeat center top;
   background-attachment: fixed;
 }
 

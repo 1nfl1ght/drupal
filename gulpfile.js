@@ -127,6 +127,7 @@ function watchFiles() {
     gulp.watch([path.watch.css], css);
     gulp.watch([path.watch.js], js);
     gulp.watch([path.watch.img], images);
+    gulp.watch([source_folder + "/jsx/**/*.jsx"], babelJs);
 }
 
 gulp.task('deploy', function() {
@@ -134,13 +135,13 @@ gulp.task('deploy', function() {
     .pipe(ghPages());
 });
 
-gulp.task("babel", function(){
+function babelJs() {
     return gulp.src(source_folder + "/jsx/**/*.jsx").
         pipe(babel({
             plugins: ['transform-react-jsx']
         })).
         pipe(gulp.dest(source_folder + "/js/"));
-});
+};
 
 function clean() {
     return del(path.clean);
