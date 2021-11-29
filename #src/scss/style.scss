@@ -40,6 +40,49 @@ $fontUbuntu: "Ubuntu";
     }
 }
 
+.modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transform: scale(0);
+    .body__form {
+        color: white;
+        padding: 40px 20px;
+        margin-top: 0px;
+        background: rgba($color: #171925, $alpha: 1);
+        border-radius: 5px;
+        .form__elem {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .form__button {
+            color: white;
+            width: 100%;
+            height: 60px;
+            border: 2px solid #f14d34;
+            border-radius: 5px;
+            background: #f14d34;
+            transition: .4s;
+            font-family: $fontMont;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .form__button:hover {
+            background: none;
+        }
+    }
+}	
+
+.modal.active {
+    transform: scale(1);
+}
+
 @media (max-width: 480px) {
     .caption {
         h2 {

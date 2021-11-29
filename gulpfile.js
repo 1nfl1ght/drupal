@@ -147,9 +147,10 @@ function clean() {
     return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, video));
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, video, babelJs));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
+exports.babelJs = babelJs;
 exports.video = video;
 exports.images = images;
 exports.js = js;
