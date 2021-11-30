@@ -50,6 +50,11 @@ $fontUbuntu: "Ubuntu";
     align-items: center;
     z-index: 1000;
     transform: scale(0);
+    top: 0;
+    left: 0;
+    a {
+        display: inline;
+    }
     .body__form {
         color: white;
         padding: 40px 20px;

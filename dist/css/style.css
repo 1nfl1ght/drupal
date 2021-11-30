@@ -1052,6 +1052,7 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 52px;
+  z-index: 4;
 }
 
 .plans__items h3 {
@@ -1820,6 +1821,12 @@ h6 {
   -webkit-transform: scale(0);
       -ms-transform: scale(0);
           transform: scale(0);
+  top: 0;
+  left: 0;
+}
+
+.modal a {
+  display: inline;
 }
 
 .modal .body__form {
@@ -2095,11 +2102,11 @@ h6 {
     width: 100%;
   }
 
-  .webform__body .body__form #form__button {
+  .webform__body .body__form .form__button {
     width: 100%;
   }
 
-  .webform__body .body__form #form__button:hover {
+  .webform__body .body__form .form__button:hover {
     background-color: #f14d34;
   }
 
