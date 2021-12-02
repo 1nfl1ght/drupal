@@ -128,21 +128,27 @@ const App = () => {
   return React.createElement("div", null, React.createElement("div", {
     className: "plans__items"
   }, React.createElement(PlansItem, {
-    type: "item__start"
+    type: "item__start",
+    textFrom: item__start,
+    n: 4
   }, React.createElement("input", {
     className: "plans__btn",
     type: "button",
     value: "ОСТАВИТЬ ЗАЯВКУ!",
     onClick: () => setModalActive(true)
   })), React.createElement(PlansItem, {
-    type: "item__business"
+    type: "item__business",
+    textFrom: item__business,
+    n: 5
   }, React.createElement("input", {
     className: "plans__btn",
     type: "button",
     value: "ОСТАВИТЬ ЗАЯВКУ!",
     onClick: () => setModalActive(true)
   })), React.createElement(PlansItem, {
-    type: "item__vip"
+    type: "item__vip",
+    textFrom: item__vip,
+    n: 5
   }, React.createElement("input", {
     className: "plans__btn",
     type: "button",
@@ -195,8 +201,22 @@ const App = () => {
   })))));
 };
 
+const Option = ({
+  text
+}) => {
+  return React.createElement("div", {
+    className: "item__option"
+  }, React.createElement("p", null, text));
+};
+
+const item__start = ['Консультации и работы по СЕО', 'Услуги дизайнера', 'Неиспользованные оплаченные часы переносятся на следующий месяц', 'Предоплата от 6 000 реблей в месяц'];
+const item__business = ['Консультации и работы по СЕО', 'Услуги дизайнера', 'Высокое время реакции - до 2 рабочих дней', 'Неиспользованные оплаченные часы не переносятся', 'Предоплата от 30 000 реблей в месяц'];
+const item__vip = ['Консультации и работы по СЕО', 'Услуги дизайнера', 'Высокое время реакции - в день обращения', 'Неиспользованные оплаченные часы не переносятся', 'Предоплата от 270 000 реблей в месяц'];
+
 const PlansItem = ({
   type,
+  textFrom,
+  n,
   children
 }) => {
   return React.createElement("div", {
@@ -205,33 +225,33 @@ const PlansItem = ({
     className: "plan-wrapper"
   }, React.createElement("h3", null, "\u0411\u0438\u0437\u043D\u0435\u0441"), React.createElement("div", {
     className: "line"
-  }), React.createElement("div", {
-    className: "item__option"
-  }, React.createElement("div", {
-    className: "checkmark"
-  }), React.createElement("p", null, "\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0438 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0430 Drupal")), React.createElement("div", {
-    className: "item__option"
-  }, React.createElement("div", {
-    className: "checkmark"
-  }), React.createElement("p", null, "\u041A\u043E\u043D\u0441\u0443\u043B\u044C\u0442\u0430\u0446\u0438\u0438 \u0438 \u0440\u0430\u0431\u043E\u0442\u044B \u043F\u043E SEO")), React.createElement("div", {
-    className: "item__option"
-  }, React.createElement("div", {
-    className: "checkmark"
-  }), React.createElement("p", null, "\u0423\u0441\u043B\u0443\u0433\u0438 \u0434\u0438\u0437\u0430\u0439\u043D\u0435\u0440\u0430")), React.createElement("div", {
-    className: "item__option"
-  }, React.createElement("div", {
-    className: "checkmark"
-  }), React.createElement("p", null, "\u0412\u044B\u0441\u043E\u043A\u043E\u0435 \u0432\u0440\u0435\u043C\u044F \u0440\u0435\u0430\u043A\u0446\u0438\u0438 \u2013 \u0434\u043E 2 \u0440\u0430\u0431\u043E\u0447\u0438\u0445 \u0434\u043D\u0435\u0439")), React.createElement("div", {
-    className: "item__option"
-  }, React.createElement("div", {
-    className: "checkmark"
-  }), React.createElement("p", null, "\u041D\u0435\u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u043D\u044B\u0435 \u0447\u0430\u0441\u044B \u043D\u0435 \u043F\u0435\u0440\u0435\u043D\u043E\u0441\u044F\u0442\u0441\u044F")), React.createElement("div", {
-    className: "item__option"
-  }, React.createElement("div", {
-    className: "checkmark"
-  }), React.createElement("p", null, "\u041F\u0440\u0435\u0434\u043E\u043F\u043B\u0430\u0442\u0430 \u043E\u0442 30 000 \u0440\u0443\u0431\u043B\u0435\u0439 \u0432 \u043C\u0435\u0441\u044F\u0446")), React.createElement("div", {
+  }), React.createElement("div", null, [...Array(n)].map((item, index) => React.createElement(Option, {
+    text: textFrom[index],
+    key: index
+  }))), React.createElement("div", {
     id: "plans__button"
   }, children)));
 };
 
+{
+  /* <div className="item__option">
+                     <p>Разработка и поддержка Drupal</p>
+                 </div>
+                 <div className="item__option">
+                     <p>Консультации и работы по SEO</p>
+                 </div>
+                 <div className="item__option">
+                     <p>Услуги дизайнера</p>
+                 </div>
+                 <div className="item__option">
+                     <p>Высокое время реакции –
+                         до 2 рабочих дней</p>
+                 </div>
+                 <div className="item__option">
+                     <p>Неиспользованные часы не переносятся</p>
+                 </div>
+                 <div className="item__option">
+                     <p>Предоплата от 30 000 рублей в месяц</p>
+  </div> */
+}
 ReactDOM.render(React.createElement(App, null), document.querySelector(".plans__place"));

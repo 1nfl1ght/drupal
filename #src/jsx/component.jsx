@@ -13,9 +13,9 @@ const App = () => {
     return (
         <div>
             <div className="plans__items">
-                <PlansItem type="item__start" ><input className="plans__btn" type="button" value="ОСТАВИТЬ ЗАЯВКУ!" onClick={() => setModalActive(true)}/></PlansItem>
-                <PlansItem type="item__business" ><input className="plans__btn" type="button" value="ОСТАВИТЬ ЗАЯВКУ!" onClick={() => setModalActive(true)}/></PlansItem>
-                <PlansItem type="item__vip" ><input className="plans__btn" type="button" value="ОСТАВИТЬ ЗАЯВКУ!" onClick={() => setModalActive(true)}/></PlansItem>
+                <PlansItem type="item__start" textFrom={item__start} n={4}><input className="plans__btn" type="button" value="ОСТАВИТЬ ЗАЯВКУ!" onClick={() => setModalActive(true)}/></PlansItem>
+                <PlansItem type="item__business" textFrom={item__business} n={5}><input className="plans__btn" type="button" value="ОСТАВИТЬ ЗАЯВКУ!" onClick={() => setModalActive(true)}/></PlansItem>
+                <PlansItem type="item__vip" textFrom={item__vip} n={5}><input className="plans__btn" type="button" value="ОСТАВИТЬ ЗАЯВКУ!" onClick={() => setModalActive(true)}/></PlansItem>
             </div>
             <Modal active={modalActive} setActive={setModalActive}>
                 <form action="">
@@ -45,7 +45,19 @@ const App = () => {
     );
 };
 
-const PlansItem = ({type, children}) => {
+const Option = ({text}) => {
+    return (
+        <div className="item__option">
+            <p>{text}</p>
+        </div>
+    );
+};
+
+const item__start = ['Консультации и работы по СЕО', 'Услуги дизайнера', 'Неиспользованные оплаченные часы переносятся на следующий месяц', 'Предоплата от 6 000 реблей в месяц'];
+const item__business = ['Консультации и работы по СЕО', 'Услуги дизайнера', 'Высокое время реакции - до 2 рабочих дней', 'Неиспользованные оплаченные часы не переносятся', 'Предоплата от 30 000 реблей в месяц'];
+const item__vip = ['Консультации и работы по СЕО', 'Услуги дизайнера', 'Высокое время реакции - в день обращения', 'Неиспользованные оплаченные часы не переносятся', 'Предоплата от 270 000 реблей в месяц'];
+
+const PlansItem = ({type, textFrom, n, children}) => {
     return (
         <div className={`${type} plans-item`}>
             <div className="plan-wrapper">
@@ -53,42 +65,8 @@ const PlansItem = ({type, children}) => {
                     Бизнес
                 </h3>
                 <div className="line"></div>
-                <div className="item__option">
-                    <div className="checkmark">
-                        {/* @@include('../img/svg/Vector.svg') */}
-                    </div>
-                    <p>Разработка и поддержка Drupal</p>
-                </div>
-                <div className="item__option">
-                    <div className="checkmark">
-                        {/* @@include('../img/svg/Vector.svg') */}
-                    </div>
-                    <p>Консультации и работы по SEO</p>                    
-                </div>
-                <div className="item__option">
-                    <div className="checkmark">
-                        {/* @@include('../img/svg/Vector.svg') */}
-                    </div>
-                    <p>Услуги дизайнера</p>
-                </div>
-                <div className="item__option">
-                    <div className="checkmark">
-                        {/* @@include('../img/svg/Vector.svg') */}
-                    </div>
-                    <p>Высокое время реакции –
-                        до 2 рабочих дней</p>
-                </div>
-                <div className="item__option">
-                    <div className="checkmark">
-                        {/* @@include('../img/svg/Vector.svg') */}
-                    </div>
-                    <p>Неиспользованные часы не переносятся</p>
-                </div>
-                <div className="item__option">
-                    <div className="checkmark">
-                        {/* @@include('../img/svg/Vector.svg') */}
-                    </div>
-                    <p>Предоплата от 30 000 рублей в месяц</p>
+                <div>
+                { [...Array(n)].map((item, index) => <Option text={textFrom[index]} key={index} /> ) }
                 </div>
                 <div id="plans__button">
                 {children}
@@ -96,6 +74,27 @@ const PlansItem = ({type, children}) => {
             </div>
         </div>
     );
-}
+};
+
+{/* <div className="item__option">
+                    <p>Разработка и поддержка Drupal</p>
+                </div>
+                <div className="item__option">
+                    <p>Консультации и работы по SEO</p>
+                </div>
+                <div className="item__option">
+                    <p>Услуги дизайнера</p>
+                </div>
+                <div className="item__option">
+                    <p>Высокое время реакции –
+                        до 2 рабочих дней</p>
+                </div>
+                <div className="item__option">
+                    <p>Неиспользованные часы не переносятся</p>
+                </div>
+                <div className="item__option">
+                    <p>Предоплата от 30 000 рублей в месяц</p>
+</div> */}
+
 
 ReactDOM.render(<App />, document.querySelector(".plans__place"));

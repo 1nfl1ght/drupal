@@ -94,4 +94,15 @@ $fontUbuntu: "Ubuntu";
             font-size: 25px;
         }
     }
+
+    .modal {
+        .body__form {
+            padding: 40px 20px;
+            width: 90%;
+            .form__elem {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+    }
 }
