@@ -79,7 +79,6 @@ $fontMont: "Montserrat";
         transform: scale(0.93);
         box-shadow: none;
         .plans__btn {
-            margin-top: 50px;
             background-color: white;
             color: #F14D34;
         }
@@ -129,6 +128,9 @@ $fontMont: "Montserrat";
             margin: 0px auto;
         }
         transition: .4s;
+        .plans__btn {
+            margin-top: 80px;
+        }
     }
 
     &__business {
@@ -139,7 +141,8 @@ $fontMont: "Montserrat";
         border-radius: 5px;
         background: white;
         .plans__btn {
-            margin-top: 50px;
+            height: 65px;
+            margin-top: 80px;
             background-color: #F14D34;
             color: white;
         }
@@ -213,7 +216,7 @@ $fontMont: "Montserrat";
                 padding: 0px;
                 .plans-item {
                     .plan-wrapper {
-                        width: 330px;
+                        width: 100%;
                     }
                     padding: 30px 10px 20px;
                     margin: 10px 0px;
