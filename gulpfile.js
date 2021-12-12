@@ -18,6 +18,7 @@ let path = {
         img: source_folder + "/img/**/*.{svg,png,jpg,jpeg}",
         fonts: source_folder + "/fonts/*.ttf",
         video: source_folder + "/video/*mp4",
+        recapcha: "node-modules/react-google-recaptcha/src/recaptcha.js",
     },
     watch:{
         html: source_folder + "/**/*.html",
@@ -41,7 +42,8 @@ let {src, dest}= require('gulp'),
     uglify = require("gulp-uglify-es").default,
     imagemin = require("gulp-imagemin"),
     ghPages = require('gulp-gh-pages'),
-    babel = require('gulp-babel');
+    babel = require('gulp-babel'),
+    concat = require('gulp-concat');
 
 function browserSync() {
     browsersync.init({
@@ -100,6 +102,15 @@ function js() {
         .pipe(dest(path.build.js))
         .pipe(browsersync.stream())
 }
+
+// function libsJS() {
+//     return src([
+//         'node_modules/react-google-recaptcha/src/recaptcha.js',
+//     ])
+//         .pipe(concat('libs.min.jsx'))
+//         .pipe(dest("#src/jsx/"))
+//         .pipe(dest(path.build.js));
+// }
 
 function images() {
     return src(path.src.img)

@@ -93,11 +93,23 @@ $fontUbuntu: "Ubuntu";
 
     .modal {
         .body__form {
-            padding: 40px 20px;
+            padding: 30px 20px;
             width: 90%;
             .form__elem {
                 width: 100%;
-                margin-bottom: 30px;
+                margin-bottom: 15px;
+                font-size: 12px;
+                height: 50px;
+            }
+            .comment {
+                height: 50px;
+                padding-top: 15px;
+            }
+            .form__button {
+                height: 50px;
+            }
+            .g-recaptcha {
+                margin: 15px 0px 15px 0px;
             }
         }
     }

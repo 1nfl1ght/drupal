@@ -61,7 +61,7 @@ $fontMont: "Montserrat";
 		&__1 {
             z-index: 1;
             position: absolute;
-            left: 45%;
+            left: 40%;
 		}
 
 		&__2 {
@@ -197,9 +197,7 @@ $fontMont: "Montserrat";
 
     .comment {
         height: 128px;
-        position: relative;
-        margin-bottom: 12px;
-        padding-bottom: 65px;
+        padding-top: 24px;
     }
 
     .form__button {
@@ -217,6 +215,11 @@ $fontMont: "Montserrat";
     }
 
     .form__button:hover {
+        background: none;
+    }
+    .form__button:disabled {
+        cursor: not-allowed;
+        opacity: .6;
         background: none;
     }
 }

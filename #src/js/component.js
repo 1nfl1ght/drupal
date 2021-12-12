@@ -53,50 +53,155 @@ const Form = ({
   checkBlockId,
   checkBoxId
 }) => {
+  const [email, setEmail] = React.useState('');
+  const [name, setName] = React.useState('');
+  const [phone, setPhone] = React.useState('');
+  const [checkboxActive, setCheckboxActive] = React.useState(false);
+  const [emailDirty, setEmailDirty] = React.useState(false);
+  const [nameDirty, setNameDirty] = React.useState(false);
+  const [phoneDirty, setPhoneDirty] = React.useState(false);
+  const [emailError, setEmailError] = React.useState('Email не может быть пустым');
+  const [nameError, setNameError] = React.useState('Имя не может быть пустым');
+  const [phoneError, setPhoneError] = React.useState('Телефон не может быть пустым');
+  const [formValid, setFormValid] = React.useState(false);
+  React.useEffect(() => {
+    if (emailError || nameError || phoneError || !checkboxActive) {
+      setFormValid(false);
+    } else {
+      setFormValid(true);
+    }
+  }, [emailError, nameError, phoneError, checkboxActive]);
+
+  function checkboxHandler() {
+    setCheckboxActive(!checkboxActive);
+  }
+
+  const blurHandler = e => {
+    switch (e.target.name) {
+      case 'name':
+        setNameDirty(true);
+        break;
+
+      case 'email':
+        setEmailDirty(true);
+        break;
+
+      case 'phone':
+        setPhoneDirty(true);
+        break;
+    }
+  };
+
+  const emailHandler = e => {
+    setEmail(e.target.value);
+    const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+    if (!re.test(String(e.target.value).toLowerCase())) {
+      setEmailError('Некорректный email');
+    } else {
+      setEmailError('');
+    }
+  };
+
+  const phoneHandler = e => {
+    setPhone(e.target.value);
+    const re = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+
+    if (!re.test(String(e.target.value).toLowerCase())) {
+      setPhoneError('Некорректный номер телефона');
+    } else {
+      setPhoneError('');
+    }
+  };
+
+  const nameHandler = e => {
+    setName(e.target.value);
+    const re = /^[a-zA-Zа-яА-Я'][a-zA-Zа-яА-Я-' ]+[a-zA-Zа-яА-Я']?$/u;
+
+    if (!re.test(String(e.target.value).toLowerCase())) {
+      setNameError('Некорректное имя');
+    } else {
+      setNameError('');
+    }
+  };
+
   return React.createElement("form", {
     action: ""
-  }, React.createElement("div", null, React.createElement("input", {
+  }, nameDirty && nameError && React.createElement("div", {
+    style: {
+      color: 'red',
+      fontSize: '14px',
+      marginBottom: '5px'
+    }
+  }, nameError), React.createElement("input", {
+    onChange: e => nameHandler(e),
+    value: name,
+    onBlur: e => blurHandler(e),
     className: "form__elem",
     id: "name",
     type: "text",
     name: "name",
     required: true,
     placeholder: "Ваше имя"
-  })), React.createElement("div", null, React.createElement("input", {
+  }), phoneDirty && phoneError && React.createElement("div", {
+    style: {
+      color: 'red',
+      fontSize: '14px',
+      marginBottom: '5px'
+    }
+  }, phoneError), React.createElement("input", {
+    onChange: e => phoneHandler(e),
+    value: phone,
+    onBlur: e => blurHandler(e),
     className: "form__elem",
     id: "phone",
     type: "tel",
     name: "phone",
     required: true,
     placeholder: "Телефон"
-  })), React.createElement("div", null, React.createElement("input", {
+  }), emailDirty && emailError && React.createElement("div", {
+    style: {
+      color: 'red',
+      fontSize: '14px',
+      marginBottom: '5px'
+    }
+  }, emailError), React.createElement("input", {
+    onChange: e => emailHandler(e),
+    value: email,
+    onBlur: e => blurHandler(e),
     className: "form__elem",
     id: "email",
     type: "email",
     name: "email",
     required: true,
     placeholder: "E-mail"
-  })), React.createElement("div", null, React.createElement("input", {
+  }), React.createElement("textarea", {
+    name: "",
     className: "comment form__elem",
+    cols: "30",
+    rows: "10",
     type: "text",
     placeholder: "Ваш комментарий"
-  })), React.createElement("div", {
+  }), React.createElement("div", {
     id: checkBlockId
   }, React.createElement("input", {
+    onChange: e => checkboxHandler(),
     className: "checkbox__input",
     type: "checkbox",
-    id: checkBoxId
+    id: checkBoxId,
+    checked: checkboxActive
   }), React.createElement("label", {
     className: "checkbox__label",
     htmlFor: checkBoxId
   }, "\u041E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u044F \u0437\u0430\u044F\u0432\u043A\u0443 \u044F \u0434\u0430\u044E \u0441\u043E\u0433\u043B\u0430\u0441\u0438\u0435 \u043D\u0430 ", React.createElement("a", null, "\u043E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0443 \u0441\u0432\u043E\u0438\u0445 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u044C\u043D\u044B\u0445 \u0434\u0430\u043D\u043D\u044B\u0445"), ".", React.createElement("span", null, "*"))), React.createElement("div", {
     className: "g-recaptcha",
     "data-sitekey": "6LfvTFQdAAAAAMi9xDDFtM63vjBlBemc9O00S52m"
-  }), React.createElement("div", null, React.createElement("input", {
+  }), React.createElement("input", {
+    disabled: !formValid,
     className: "form__button",
     type: "button",
     value: "ОСТАВИТЬ ЗАЯВКУ!"
-  })));
+  }));
 };
 
 const App = () => {

@@ -116,7 +116,7 @@ $fontMont: "Montserrat";
 
 @media (max-width: 480px) {
     .team {
-        padding: 0px 20px;
+        padding: 0px 15px;
     }
     .team-tasks {
         padding: 50px 0px;
@@ -149,12 +149,12 @@ $fontMont: "Montserrat";
             &__item {
                 margin-bottom: 20px;
                 margin-top: 0px;
-                width: 165px;
+                width: 155px;
                 .photo {
                     margin-bottom: 20px;
                     img {
-                        width: 165px;
-                        height: 165px;
+                        width: 155px;
+                        height: 155px;
                     }
                 }
                 .description {

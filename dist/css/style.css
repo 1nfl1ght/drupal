@@ -375,25 +375,15 @@ h6 {
   top: -10px;
 }
 
-.content__achievements .achievements__elem::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: -11px;
-  width: 3px;
-  background-color: #F14D34;
-  height: 80px;
-}
-
 .content__achievements .achievements__elem :first-child:before {
   content: "";
   display: block;
   position: absolute;
   left: -11px;
-  top: 5px;
+  top: 0px;
   width: 3px;
   background-color: #F14D34;
-  height: 100px;
+  height: 110px;
 }
 
 .info__tariffs {
@@ -497,7 +487,7 @@ h6 {
 .webform .ds__1 {
   z-index: 1;
   position: absolute;
-  left: 45%;
+  left: 40%;
 }
 
 .webform .ds__2 {
@@ -688,9 +678,7 @@ h6 {
 
 .body__form .comment {
   height: 128px;
-  position: relative;
-  margin-bottom: 12px;
-  padding-bottom: 65px;
+  padding-top: 24px;
 }
 
 .body__form .form__button {
@@ -710,6 +698,12 @@ h6 {
 }
 
 .body__form .form__button:hover {
+  background: none;
+}
+
+.body__form .form__button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
   background: none;
 }
 
@@ -1938,7 +1932,7 @@ h6 {
   .menu__body {
     position: fixed;
     width: 100%;
-    height: 700px;
+    height: 620px;
     bottom: -200%;
     left: 0;
     background-color: #424242;
@@ -1968,11 +1962,11 @@ h6 {
   }
 
   .menu__body .menu__list .administering {
-    margin-bottom: 195px;
+    margin-bottom: 155px;
   }
 
   .menu__body .menu__list .about {
-    margin-bottom: 195px;
+    margin-bottom: 155px;
   }
 
   .menu__body .menu__list .submenu {
@@ -1988,9 +1982,10 @@ h6 {
   }
 
   .menu__body .menu__list .submenu a {
+    font-size: 11px;
     display: block;
-    height: 39px;
-    padding: 8px 20px;
+    height: 32px;
+    padding: 10px 20px;
     padding-left: 40px;
     border-bottom: 1px solid black;
   }
@@ -2061,6 +2056,27 @@ h6 {
     text-align: start;
     margin-right: 0px;
     margin-left: 10px;
+    width: 130px;
+  }
+
+  .header .content__achievements .achievements__elem span {
+    font-family: "Montserrat";
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .header .content__achievements .achievements__elem p {
+    opacity: 0.7;
+    font-family: "Montserrat";
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 15px;
+    margin-top: 8px;
+  }
+
+  .header .content__achievements .achievements__elem img {
+    position: absolute;
+    top: -10px;
   }
 
   .header .info__tariffs {
@@ -2335,7 +2351,7 @@ h6 {
   }
 
   .team {
-    padding: 0px 20px;
+    padding: 0px 15px;
   }
 
   .team-tasks {
@@ -2376,7 +2392,7 @@ h6 {
   .team-group .group-list__item {
     margin-bottom: 20px;
     margin-top: 0px;
-    width: 165px;
+    width: 155px;
   }
 
   .team-group .group-list__item .photo {
@@ -2384,8 +2400,8 @@ h6 {
   }
 
   .team-group .group-list__item .photo img {
-    width: 165px;
-    height: 165px;
+    width: 155px;
+    height: 155px;
   }
 
   .team-group .group-list__item .description .name {
@@ -2468,12 +2484,27 @@ h6 {
   }
 
   .modal .body__form {
-    padding: 40px 20px;
+    padding: 30px 20px;
     width: 90%;
   }
 
   .modal .body__form .form__elem {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    height: 50px;
+  }
+
+  .modal .body__form .comment {
+    height: 50px;
+    padding-top: 15px;
+  }
+
+  .modal .body__form .form__button {
+    height: 50px;
+  }
+
+  .modal .body__form .g-recaptcha {
+    margin: 15px 0px 15px 0px;
   }
 }
