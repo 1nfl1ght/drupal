@@ -5,3 +5,4 @@
 @@include('smooth_scroll.js')
 @@include('header_burger.js')
 @@include('component.js')
+@@include('phoneMask.js')

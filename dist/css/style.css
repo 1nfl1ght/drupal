@@ -145,6 +145,7 @@ h6 {
   position: relative;
   height: 650px;
   overflow: hidden;
+  background-color: #494949;
 }
 
 .header__menu {
@@ -1864,6 +1865,12 @@ h6 {
 }
 
 .modal .body__form .form__button:hover {
+  background: none;
+}
+
+.modal .body__form .form__button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
   background: none;
 }
 

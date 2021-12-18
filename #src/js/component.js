@@ -2,8 +2,13 @@ const Modal = ({
   children
 }) => {
   const hideModal = () => {
+    let start = 1;
     let modal = document.querySelector(".modal");
-    modal.style.transform = "scale(0)";
+    let timer = requestAnimationFrame(function animateModal(timestamp) {
+      start -= 0.03125;
+      modal.style.transform = "scale(" + start + ")";
+      if (start > 0) requestAnimationFrame(animateModal);
+    });
   };
 
   return React.createElement("div", {
@@ -53,9 +58,21 @@ const Form = ({
   checkBlockId,
   checkBoxId
 }) => {
-  const [email, setEmail] = React.useState('');
-  const [name, setName] = React.useState('');
-  const [phone, setPhone] = React.useState('');
+  const [email, setEmail] = React.useState(() => {
+    const saved = localStorage.getItem("email");
+    const initialValue = JSON.parse(saved);
+    return initialValue || "";
+  });
+  const [name, setName] = React.useState(() => {
+    const saved = localStorage.getItem("name");
+    const initialValue = JSON.parse(saved);
+    return initialValue || "";
+  });
+  const [phone, setPhone] = React.useState(() => {
+    const saved = localStorage.getItem("phone");
+    const initialValue = JSON.parse(saved);
+    return initialValue || "";
+  });
   const [checkboxActive, setCheckboxActive] = React.useState(false);
   const [emailDirty, setEmailDirty] = React.useState(false);
   const [nameDirty, setNameDirty] = React.useState(false);
@@ -72,21 +89,30 @@ const Form = ({
     }
   }, [emailError, nameError, phoneError, checkboxActive]);
 
-  function checkboxHandler() {
+  const checkboxHandler = () => {
     setCheckboxActive(!checkboxActive);
-  }
+  };
+
+  React.useEffect(() => {
+    localStorage.setItem("name", JSON.stringify(name));
+    localStorage.setItem("email", JSON.stringify(email));
+    localStorage.setItem("phone", JSON.stringify(phone));
+  }, [name, email, phone]);
 
   const blurHandler = e => {
     switch (e.target.name) {
       case 'name':
+        nameHandler(e);
         setNameDirty(true);
         break;
 
       case 'email':
+        emailHandler(e);
         setEmailDirty(true);
         break;
 
       case 'phone':
+        phoneHandler(e);
         setPhoneDirty(true);
         break;
     }
@@ -125,9 +151,7 @@ const Form = ({
     }
   };
 
-  return React.createElement("form", {
-    action: ""
-  }, nameDirty && nameError && React.createElement("div", {
+  return React.createElement("form", null, nameDirty && nameError && React.createElement("div", {
     style: {
       color: 'red',
       fontSize: '14px',
@@ -156,6 +180,7 @@ const Form = ({
     className: "form__elem",
     id: "phone",
     type: "tel",
+    "data-tel-input": true,
     name: "phone",
     required: true,
     placeholder: "Телефон"
@@ -193,25 +218,22 @@ const Form = ({
   }), React.createElement("label", {
     className: "checkbox__label",
     htmlFor: checkBoxId
-  }, "\u041E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u044F \u0437\u0430\u044F\u0432\u043A\u0443 \u044F \u0434\u0430\u044E \u0441\u043E\u0433\u043B\u0430\u0441\u0438\u0435 \u043D\u0430 ", React.createElement("a", null, "\u043E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0443 \u0441\u0432\u043E\u0438\u0445 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u044C\u043D\u044B\u0445 \u0434\u0430\u043D\u043D\u044B\u0445"), ".", React.createElement("span", null, "*"))), React.createElement("div", {
-    className: "g-recaptcha",
-    "data-sitekey": "6LfvTFQdAAAAAMi9xDDFtM63vjBlBemc9O00S52m"
-  }), React.createElement("input", {
+  }, "\u041E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u044F \u0437\u0430\u044F\u0432\u043A\u0443 \u044F \u0434\u0430\u044E \u0441\u043E\u0433\u043B\u0430\u0441\u0438\u0435 \u043D\u0430 ", React.createElement("a", null, "\u043E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0443 \u0441\u0432\u043E\u0438\u0445 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u044C\u043D\u044B\u0445 \u0434\u0430\u043D\u043D\u044B\u0445"), ".", React.createElement("span", null, "*"))), React.createElement("input", {
     disabled: !formValid,
     className: "form__button",
-    type: "button",
+    type: "submit",
     value: "ОСТАВИТЬ ЗАЯВКУ!"
   }));
 };
 
 const App = () => {
   const showModal = () => {
-    let start = Date.now();
+    let start = 0;
     let modal = document.querySelector(".modal");
-    let timer = requestAnimationFrame(function animateBall(timestamp) {
-      let interval = Date.now() - start;
-      modal.style.transform = "scale(" + interval / 200 + ")";
-      if (interval < 200) requestAnimationFrame(animateBall);
+    let timer = requestAnimationFrame(function animateModal(timestamp) {
+      start += 0.03125;
+      modal.style.transform = "scale(" + start + ")";
+      if (start < 1) requestAnimationFrame(animateModal);
     });
   };
 
