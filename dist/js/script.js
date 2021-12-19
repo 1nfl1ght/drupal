@@ -262,7 +262,11 @@ const Form = ({
     }
   };
 
-  return React.createElement("form", null, nameDirty && nameError && React.createElement("div", {
+  return React.createElement("form", {
+    "class": "ajaxForm",
+    action: "https://formcarry.com/s/kW0qF4VTJD_",
+    "accept-charset": "UTF-8"
+  }, nameDirty && nameError && React.createElement("div", {
     style: {
       color: 'red',
       fontSize: '14px',
@@ -329,7 +333,9 @@ const Form = ({
   }), React.createElement("label", {
     className: "checkbox__label",
     htmlFor: checkBoxId
-  }, "\u041E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u044F \u0437\u0430\u044F\u0432\u043A\u0443 \u044F \u0434\u0430\u044E \u0441\u043E\u0433\u043B\u0430\u0441\u0438\u0435 \u043D\u0430 ", React.createElement("a", null, "\u043E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0443 \u0441\u0432\u043E\u0438\u0445 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u044C\u043D\u044B\u0445 \u0434\u0430\u043D\u043D\u044B\u0445"), ".", React.createElement("span", null, "*"))), React.createElement("input", {
+  }, "\u041E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u044F \u0437\u0430\u044F\u0432\u043A\u0443 \u044F \u0434\u0430\u044E \u0441\u043E\u0433\u043B\u0430\u0441\u0438\u0435 \u043D\u0430 ", React.createElement("a", {
+    href: "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+  }, "\u043E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0443 \u0441\u0432\u043E\u0438\u0445 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u044C\u043D\u044B\u0445 \u0434\u0430\u043D\u043D\u044B\u0445"), ".", React.createElement("span", null, "*"))), React.createElement("input", {
     disabled: !formValid,
     className: "form__button",
     type: "submit",
@@ -461,3 +467,40 @@ document.addEventListener("DOMContentLoaded", function () {
         phoneInput.addEventListener('paste', onPhonePaste, false);
     }
 })
+$(function(){
+        
+    $(".ajaxForm").submit(function(e){
+
+        e.preventDefault();
+
+        var href = $(this).attr("action");
+
+        $.ajax({
+
+            type: "POST",
+
+            dataType: "json",
+
+            url: href,
+
+            data: $(this).serialize(),
+
+            success: function(response){
+
+                if(response.status == "success"){
+
+                    alert("Мы приняли вашу заявку!");
+
+                }else{
+
+                    alert("Произошла ошибка: " + response.message);
+
+                }
+
+            }
+
+        });
+
+    });
+
+});

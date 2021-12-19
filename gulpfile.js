@@ -40,7 +40,7 @@ let {src, dest}= require('gulp'),
     clean_css = require("gulp-clean-css"),
     rename = require("gulp-rename"),
     uglify = require("gulp-uglify-es").default,
-    imagemin = require("gulp-imagemin"),
+    //imagemin = require("gulp-imagemin"),
     ghPages = require('gulp-gh-pages'),
     babel = require('gulp-babel'),
     concat = require('gulp-concat');
@@ -116,12 +116,12 @@ function images() {
     return src(path.src.img)
         .pipe(dest(path.build.img))
         .pipe(src(path.src.img))
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            interlaced: true,
-            optimizationLevel: 3
-        }))
+        // .pipe(imagemin({
+        //     progressive: true,
+        //     svgoPlugins: [{removeViewBox: false}],
+        //     interlaced: true,
+        //     optimizationLevel: 3
+        // }))
         .pipe(dest(path.build.img))
         .pipe(browsersync.stream())
 }

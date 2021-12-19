@@ -1,4 +1,4 @@
-const Modal = ({children}) => {
+const Modal = ({ children }) => {
     const hideModal = () => {
         let start = 1;
         let modal = document.querySelector(".modal");
@@ -18,7 +18,7 @@ const Modal = ({children}) => {
     );
 };
 
-const Option = ({text}) => {
+const Option = ({ text }) => {
     return (
         <div className="item__option">
             <p>{text}</p>
@@ -33,16 +33,16 @@ const startTitle = ['Стартовый'];
 const businessTitle = ['Бизнес'];
 const vipTitle = ['VIP'];
 
-const PlansItem = ({type, textFrom, titleFrom, n, children}) => {
+const PlansItem = ({ type, textFrom, titleFrom, n, children }) => {
     return (
         <div className={`${type} plans-item`}>
             <div className="plan-wrapper">
                 <h3>
-                {titleFrom}
+                    {titleFrom}
                 </h3>
                 <div className="line"></div>
                 <div>
-                { [...Array(n)].map((item, index) => <Option text={textFrom[index]} key={index} /> ) }
+                    {[...Array(n)].map((item, index) => <Option text={textFrom[index]} key={index} />)}
                 </div>
                 {children}
             </div>
@@ -50,7 +50,7 @@ const PlansItem = ({type, textFrom, titleFrom, n, children}) => {
     );
 };
 
-const Form = ({ checkBlockId,  checkBoxId }) => {
+const Form = ({ checkBlockId, checkBoxId }) => {
     const [email, setEmail] = React.useState(() => {
         const saved = localStorage.getItem("email");
         const initialValue = JSON.parse(saved);
@@ -84,8 +84,8 @@ const Form = ({ checkBlockId,  checkBoxId }) => {
     }, [emailError, nameError, phoneError, checkboxActive]);
 
     const checkboxHandler = () => {
-		setCheckboxActive(!checkboxActive);
-	}
+        setCheckboxActive(!checkboxActive);
+    }
 
     React.useEffect(() => {
         localStorage.setItem("name", JSON.stringify(name));
@@ -141,21 +141,21 @@ const Form = ({ checkBlockId,  checkBoxId }) => {
     }
 
     return (
-        <form>
-            {(nameDirty && nameError) && <div style={{color: 'red', fontSize: '14px', marginBottom: '5px'}}>{nameError}</div>}
-            <input onChange={e => nameHandler(e)} value={name} onBlur={e => blurHandler(e)} className="form__elem" id="name" type="text" name="name" required placeholder="Ваше имя"/>
-            {(phoneDirty && phoneError) && <div style={{color: 'red', fontSize: '14px', marginBottom: '5px'}}>{phoneError}</div>}
-            <input onChange={e => phoneHandler(e)} value={phone} onBlur={e => blurHandler(e)} className="form__elem" id="phone" type="tel" data-tel-input name="phone" required placeholder="Телефон"/>
-            {(emailDirty && emailError) && <div style={{color: 'red', fontSize: '14px', marginBottom: '5px'}}>{emailError}</div>}
-            <input onChange={e => emailHandler(e)} value={email} onBlur={e => blurHandler(e)} className="form__elem" id="email" type="email" name="email" required placeholder="E-mail"/>
+        <form class="ajaxForm" action="https://formcarry.com/s/kW0qF4VTJD_" accept-charset="UTF-8">
+            {(nameDirty && nameError) && <div style={{ color: 'red', fontSize: '14px', marginBottom: '5px' }}>{nameError}</div>}
+            <input onChange={e => nameHandler(e)} value={name} onBlur={e => blurHandler(e)} className="form__elem" id="name" type="text" name="name" required placeholder="Ваше имя" />
+            {(phoneDirty && phoneError) && <div style={{ color: 'red', fontSize: '14px', marginBottom: '5px' }}>{phoneError}</div>}
+            <input onChange={e => phoneHandler(e)} value={phone} onBlur={e => blurHandler(e)} className="form__elem" id="phone" type="tel" data-tel-input name="phone" required placeholder="Телефон" />
+            {(emailDirty && emailError) && <div style={{ color: 'red', fontSize: '14px', marginBottom: '5px' }}>{emailError}</div>}
+            <input onChange={e => emailHandler(e)} value={email} onBlur={e => blurHandler(e)} className="form__elem" id="email" type="email" name="email" required placeholder="E-mail" />
             <textarea name="" className="comment form__elem" cols="30" rows="10" type="text" placeholder="Ваш комментарий">
             </textarea>
             <div id={checkBlockId}>
-                <input onChange={e => checkboxHandler()}  className="checkbox__input" type="checkbox" id={checkBoxId} checked={checkboxActive}/>
-                <label className="checkbox__label" htmlFor={checkBoxId}>Отправляя заявку я даю согласие на <a>обработку своих персональных данных</a>.<span>*</span></label>
+                <input onChange={e => checkboxHandler()} className="checkbox__input" type="checkbox" id={checkBoxId} checked={checkboxActive} />
+                <label className="checkbox__label" htmlFor={checkBoxId}>Отправляя заявку я даю согласие на <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">обработку своих персональных данных</a>.<span>*</span></label>
             </div>
             {/* <div className="g-recaptcha" data-sitekey="6LfvTFQdAAAAAMi9xDDFtM63vjBlBemc9O00S52m"></div> */}
-            <input disabled={!formValid} className="form__button" type="submit" value="ОСТАВИТЬ ЗАЯВКУ!"/>
+            <input disabled={!formValid} className="form__button" type="submit" value="ОСТАВИТЬ ЗАЯВКУ!" />
         </form>
     );
 };
@@ -174,17 +174,17 @@ const App = () => {
     return (
         <div>
             <div className="plans__items">
-                <PlansItem type="item__start" textFrom={itemStart} titleFrom={startTitle} n={4}><input className="plans__btn" type="button" value="ОСТАВИТЬ ЗАЯВКУ!" onClick={() => showModal()}/></PlansItem>
-                <PlansItem type="item__business" textFrom={itemBusiness} titleFrom={businessTitle} n={5}><input className="plans__btn" type="button" value="ОСТАВИТЬ ЗАЯВКУ!" onClick={() => showModal()}/></PlansItem>
-                <PlansItem type="item__vip" textFrom={itemVip} titleFrom={vipTitle} n={5}><input className="plans__btn" type="button" value="ОСТАВИТЬ ЗАЯВКУ!" onClick={() => showModal()}/></PlansItem>
+                <PlansItem type="item__start" textFrom={itemStart} titleFrom={startTitle} n={4}><input className="plans__btn" type="button" value="ОСТАВИТЬ ЗАЯВКУ!" onClick={() => showModal()} /></PlansItem>
+                <PlansItem type="item__business" textFrom={itemBusiness} titleFrom={businessTitle} n={5}><input className="plans__btn" type="button" value="ОСТАВИТЬ ЗАЯВКУ!" onClick={() => showModal()} /></PlansItem>
+                <PlansItem type="item__vip" textFrom={itemVip} titleFrom={vipTitle} n={5}><input className="plans__btn" type="button" value="ОСТАВИТЬ ЗАЯВКУ!" onClick={() => showModal()} /></PlansItem>
             </div>
             <Modal>
-                <Form checkBlockId={"modal__form__checkbox"} checkBoxId={"modal__userAgreement"}/>
+                <Form checkBlockId={"modal__form__checkbox"} checkBoxId={"modal__userAgreement"} />
             </Modal>
         </div>
     );
 };
 
-ReactDOM.render(<Form checkBlockId={"form__checkbox"} checkBoxId={"userAgreement"}/>, document.querySelector("#main-form"));
+ReactDOM.render(<Form checkBlockId={"form__checkbox"} checkBoxId={"userAgreement"} />, document.querySelector("#main-form"));
 
 ReactDOM.render(<App />, document.querySelector(".plans__place"));

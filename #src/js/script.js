@@ -6,3 +6,4 @@
 @@include('header_burger.js')
 @@include('component.js')
 @@include('phoneMask.js')
+@@include('handler _alert_form.js')
