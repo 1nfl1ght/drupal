@@ -10,6 +10,7 @@ let path = {
         img: project_folder + "/img/",
         fonts: project_folder + "/fonts/",
         video: project_folder + "/video/",
+        php: project_folder + "/php/",
     },
     src:{
         html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
@@ -19,6 +20,7 @@ let path = {
         fonts: source_folder + "/fonts/*.ttf",
         video: source_folder + "/video/*mp4",
         recapcha: "node-modules/react-google-recaptcha/src/recaptcha.js",
+        php: source_folder + "/php/*.php",
     },
     watch:{
         html: source_folder + "/**/*.html",
@@ -61,6 +63,12 @@ function html() {
         .pipe(dest(path.build.html))
         .pipe(browsersync.stream())
 }
+
+// function php() {
+//     return src(path.src.php)
+//         .pipe(dest(path.build.php))
+//         .pipe(browsersync.stream())
+// }
 
 function css() {
     return src(path.src.css)

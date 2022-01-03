@@ -28,6 +28,54 @@ $fontUbuntu: "Ubuntu";
     margin: 0 auto;
 }
 
+textarea {
+    resize: vertical;
+    transition: none 0s ease 0s;
+}
+
+textarea::placeholder {
+    color: white;
+}
+
+textarea:focus{
+    animation: animate 0.4s linear forwards;
+}
+
+@keyframes animate { 
+    100% {
+        box-shadow: 0px 0px 4px #f14d34,
+                        0px 0px 4px #f14d34,
+                        0px 0px 6px #f14d34;
+    }
+}
+
+.loader {
+    width: 40px;
+    height: 40px;
+    background: url("../img/png/android-chrome-256x256-rolling.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: rotating 2s 0.25s linear infinite;
+    display: none;
+    position: absolute;
+    top: 6px;
+    left: 45%;
+}
+
+.from__submit {
+    position: relative;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .caption {
     text-align: center;
     h2 {

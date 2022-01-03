@@ -678,8 +678,21 @@ h6 {
 }
 
 .body__form .comment {
+  font-family: "Montserrat";
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  width: 100%;
+  height: 68px;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   height: 128px;
   padding-top: 24px;
+  background: none;
+  margin-bottom: 8px;
 }
 
 .body__form .form__button {
@@ -1795,6 +1808,95 @@ h6 {
 ._min-container {
   width: 1080px;
   margin: 0 auto;
+}
+
+textarea {
+  resize: vertical;
+  -webkit-transition: none 0s ease 0s;
+  -o-transition: none 0s ease 0s;
+  transition: none 0s ease 0s;
+}
+
+textarea::-webkit-input-placeholder {
+  color: white;
+}
+
+textarea::-moz-placeholder {
+  color: white;
+}
+
+textarea:-ms-input-placeholder {
+  color: white;
+}
+
+textarea::-ms-input-placeholder {
+  color: white;
+}
+
+textarea::placeholder {
+  color: white;
+}
+
+textarea:focus {
+  -webkit-animation: animate 0.4s linear forwards;
+          animation: animate 0.4s linear forwards;
+}
+
+@-webkit-keyframes animate {
+  100% {
+    -webkit-box-shadow: 0px 0px 4px #f14d34, 0px 0px 4px #f14d34, 0px 0px 6px #f14d34;
+            box-shadow: 0px 0px 4px #f14d34, 0px 0px 4px #f14d34, 0px 0px 6px #f14d34;
+  }
+}
+
+@keyframes animate {
+  100% {
+    -webkit-box-shadow: 0px 0px 4px #f14d34, 0px 0px 4px #f14d34, 0px 0px 6px #f14d34;
+            box-shadow: 0px 0px 4px #f14d34, 0px 0px 4px #f14d34, 0px 0px 6px #f14d34;
+  }
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  background: url("../img/png/android-chrome-256x256-rolling.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-animation: rotating 2s 0.25s linear infinite;
+          animation: rotating 2s 0.25s linear infinite;
+  display: none;
+  position: absolute;
+  top: 6px;
+  left: 45%;
+}
+
+.from__submit {
+  position: relative;
+}
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .caption {

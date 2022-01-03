@@ -1,59 +1,3 @@
-const Modal = ({
-  children
-}) => {
-  const hideModal = () => {
-    let start = 1;
-    let modal = document.querySelector(".modal");
-    let timer = requestAnimationFrame(function animateModal(timestamp) {
-      start -= 0.03125;
-      modal.style.transform = "scale(" + start + ")";
-      if (start > 0) requestAnimationFrame(animateModal);
-    });
-  };
-
-  return React.createElement("div", {
-    className: "modal",
-    onClick: () => hideModal()
-  }, React.createElement("div", {
-    className: "body__form",
-    onClick: e => e.stopPropagation()
-  }, children));
-};
-
-const Option = ({
-  text
-}) => {
-  return React.createElement("div", {
-    className: "item__option"
-  }, React.createElement("p", null, text));
-};
-
-const itemStart = ['Консультации и работы по СЕО', 'Услуги дизайнера', 'Неиспользованные оплаченные часы переносятся на следующий месяц', 'Предоплата от 6 000 реблей в месяц'];
-const itemBusiness = ['Консультации и работы по СЕО', 'Услуги дизайнера', 'Высокое время реакции - до 2 рабочих дней', 'Неиспользованные оплаченные часы не переносятся', 'Предоплата от 30 000 реблей в месяц'];
-const itemVip = ['Консультации и работы по СЕО', 'Услуги дизайнера', 'Высокое время реакции - в день обращения', 'Неиспользованные оплаченные часы не переносятся', 'Предоплата от 270 000 реблей в месяц'];
-const startTitle = ['Стартовый'];
-const businessTitle = ['Бизнес'];
-const vipTitle = ['VIP'];
-
-const PlansItem = ({
-  type,
-  textFrom,
-  titleFrom,
-  n,
-  children
-}) => {
-  return React.createElement("div", {
-    className: `${type} plans-item`
-  }, React.createElement("div", {
-    className: "plan-wrapper"
-  }, React.createElement("h3", null, titleFrom), React.createElement("div", {
-    className: "line"
-  }), React.createElement("div", null, [...Array(n)].map((item, index) => React.createElement(Option, {
-    text: textFrom[index],
-    key: index
-  }))), children));
-};
-
 const Form = ({
   checkBlockId,
   checkBoxId
@@ -152,9 +96,9 @@ const Form = ({
   };
 
   return React.createElement("form", {
-    "class": "ajaxForm",
+    className: "ajaxForm",
     action: "https://formcarry.com/s/kW0qF4VTJD_",
-    "accept-charset": "UTF-8"
+    acceptCharset: "UTF-8"
   }, nameDirty && nameError && React.createElement("div", {
     style: {
       color: 'red',
@@ -206,7 +150,7 @@ const Form = ({
     placeholder: "E-mail"
   }), React.createElement("textarea", {
     name: "",
-    className: "comment form__elem",
+    className: "comment",
     cols: "30",
     rows: "10",
     type: "text",
@@ -224,65 +168,15 @@ const Form = ({
     htmlFor: checkBoxId
   }, "\u041E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u044F \u0437\u0430\u044F\u0432\u043A\u0443 \u044F \u0434\u0430\u044E \u0441\u043E\u0433\u043B\u0430\u0441\u0438\u0435 \u043D\u0430 ", React.createElement("a", {
     href: "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
-  }, "\u043E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0443 \u0441\u0432\u043E\u0438\u0445 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u044C\u043D\u044B\u0445 \u0434\u0430\u043D\u043D\u044B\u0445"), ".", React.createElement("span", null, "*"))), React.createElement("input", {
+  }, "\u043E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0443 \u0441\u0432\u043E\u0438\u0445 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u044C\u043D\u044B\u0445 \u0434\u0430\u043D\u043D\u044B\u0445"), ".", React.createElement("span", null, "*"))), React.createElement("div", {
+    className: "from__submit"
+  }, React.createElement("input", {
     disabled: !formValid,
+    id: "submit",
     className: "form__button",
     type: "submit",
     value: "ОСТАВИТЬ ЗАЯВКУ!"
-  }));
-};
-
-const App = () => {
-  const showModal = () => {
-    let start = 0;
-    let modal = document.querySelector(".modal");
-    let timer = requestAnimationFrame(function animateModal(timestamp) {
-      start += 0.03125;
-      modal.style.transform = "scale(" + start + ")";
-      if (start < 1) requestAnimationFrame(animateModal);
-    });
-  };
-
-  return React.createElement("div", null, React.createElement("div", {
-    className: "plans__items"
-  }, React.createElement(PlansItem, {
-    type: "item__start",
-    textFrom: itemStart,
-    titleFrom: startTitle,
-    n: 4
-  }, React.createElement("input", {
-    className: "plans__btn",
-    type: "button",
-    value: "ОСТАВИТЬ ЗАЯВКУ!",
-    onClick: () => showModal()
-  })), React.createElement(PlansItem, {
-    type: "item__business",
-    textFrom: itemBusiness,
-    titleFrom: businessTitle,
-    n: 5
-  }, React.createElement("input", {
-    className: "plans__btn",
-    type: "button",
-    value: "ОСТАВИТЬ ЗАЯВКУ!",
-    onClick: () => showModal()
-  })), React.createElement(PlansItem, {
-    type: "item__vip",
-    textFrom: itemVip,
-    titleFrom: vipTitle,
-    n: 5
-  }, React.createElement("input", {
-    className: "plans__btn",
-    type: "button",
-    value: "ОСТАВИТЬ ЗАЯВКУ!",
-    onClick: () => showModal()
-  }))), React.createElement(Modal, null, React.createElement(Form, {
-    checkBlockId: "modal__form__checkbox",
-    checkBoxId: "modal__userAgreement"
+  }), React.createElement("div", {
+    className: "loader"
   })));
 };
-
-ReactDOM.render(React.createElement(Form, {
-  checkBlockId: "form__checkbox",
-  checkBoxId: "userAgreement"
-}), document.querySelector("#main-form"));
-ReactDOM.render(React.createElement(App, null), document.querySelector(".plans__place"));
